@@ -146,6 +146,7 @@
 				TargetAttributes = {
 					38E7A5FA1E8B3DD40079DE1E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6ZX8Q22G36;
 						ProvisioningStyle = Automatic;
 					};
 					38E7A60E1E8B3DD40079DE1E = {
@@ -337,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6ZX8Q22G36;
 				INFOPLIST_FILE = SmartFarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarm;
@@ -349,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6ZX8Q22G36;
 				INFOPLIST_FILE = SmartFarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarm;
