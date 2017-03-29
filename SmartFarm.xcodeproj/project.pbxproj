@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38E7A5FF1E8B3DD40079DE1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */; };
+		38E7A6011E8B3DD40079DE1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A6001E8B3DD40079DE1E /* ViewController.swift */; };
+		38E7A6041E8B3DD40079DE1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6021E8B3DD40079DE1E /* Main.storyboard */; };
+		38E7A6061E8B3DD40079DE1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6051E8B3DD40079DE1E /* Assets.xcassets */; };
+		38E7A6091E8B3DD40079DE1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6071E8B3DD40079DE1E /* LaunchScreen.storyboard */; };
+		38E7A6141E8B3DD40079DE1E /* SmartFarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A6131E8B3DD40079DE1E /* SmartFarmTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38E7A6101E8B3DD40079DE1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E7A5F31E8B3DD40079DE1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38E7A5FA1E8B3DD40079DE1E;
+			remoteInfo = SmartFarm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38E7A5FB1E8B3DD40079DE1E /* SmartFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38E7A6001E8B3DD40079DE1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38E7A6031E8B3DD40079DE1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38E7A6051E8B3DD40079DE1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38E7A6081E8B3DD40079DE1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38E7A60A1E8B3DD40079DE1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38E7A60F1E8B3DD40079DE1E /* SmartFarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartFarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E7A6131E8B3DD40079DE1E /* SmartFarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFarmTests.swift; sourceTree = "<group>"; };
+		38E7A6151E8B3DD40079DE1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38E7A5F81E8B3DD40079DE1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E7A60C1E8B3DD40079DE1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38E7A5F21E8B3DD40079DE1E = {
+			isa = PBXGroup;
+			children = (
+				38E7A5FD1E8B3DD40079DE1E /* SmartFarm */,
+				38E7A6121E8B3DD40079DE1E /* SmartFarmTests */,
+				38E7A5FC1E8B3DD40079DE1E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38E7A5FC1E8B3DD40079DE1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38E7A5FB1E8B3DD40079DE1E /* SmartFarm.app */,
+				38E7A60F1E8B3DD40079DE1E /* SmartFarmTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38E7A5FD1E8B3DD40079DE1E /* SmartFarm */ = {
+			isa = PBXGroup;
+			children = (
+				38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */,
+				38E7A6001E8B3DD40079DE1E /* ViewController.swift */,
+				38E7A6021E8B3DD40079DE1E /* Main.storyboard */,
+				38E7A6051E8B3DD40079DE1E /* Assets.xcassets */,
+				38E7A6071E8B3DD40079DE1E /* LaunchScreen.storyboard */,
+				38E7A60A1E8B3DD40079DE1E /* Info.plist */,
+			);
+			path = SmartFarm;
+			sourceTree = "<group>";
+		};
+		38E7A6121E8B3DD40079DE1E /* SmartFarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				38E7A6131E8B3DD40079DE1E /* SmartFarmTests.swift */,
+				38E7A6151E8B3DD40079DE1E /* Info.plist */,
+			);
+			path = SmartFarmTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38E7A5FA1E8B3DD40079DE1E /* SmartFarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38E7A6181E8B3DD40079DE1E /* Build configuration list for PBXNativeTarget "SmartFarm" */;
+			buildPhases = (
+				38E7A5F71E8B3DD40079DE1E /* Sources */,
+				38E7A5F81E8B3DD40079DE1E /* Frameworks */,
+				38E7A5F91E8B3DD40079DE1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartFarm;
+			productName = SmartFarm;
+			productReference = 38E7A5FB1E8B3DD40079DE1E /* SmartFarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38E7A60E1E8B3DD40079DE1E /* SmartFarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38E7A61B1E8B3DD40079DE1E /* Build configuration list for PBXNativeTarget "SmartFarmTests" */;
+			buildPhases = (
+				38E7A60B1E8B3DD40079DE1E /* Sources */,
+				38E7A60C1E8B3DD40079DE1E /* Frameworks */,
+				38E7A60D1E8B3DD40079DE1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38E7A6111E8B3DD40079DE1E /* PBXTargetDependency */,
+			);
+			name = SmartFarmTests;
+			productName = SmartFarmTests;
+			productReference = 38E7A60F1E8B3DD40079DE1E /* SmartFarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38E7A5F31E8B3DD40079DE1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Tolkiana;
+				TargetAttributes = {
+					38E7A5FA1E8B3DD40079DE1E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					38E7A60E1E8B3DD40079DE1E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 38E7A5FA1E8B3DD40079DE1E;
+					};
+				};
+			};
+			buildConfigurationList = 38E7A5F61E8B3DD40079DE1E /* Build configuration list for PBXProject "SmartFarm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38E7A5F21E8B3DD40079DE1E;
+			productRefGroup = 38E7A5FC1E8B3DD40079DE1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38E7A5FA1E8B3DD40079DE1E /* SmartFarm */,
+				38E7A60E1E8B3DD40079DE1E /* SmartFarmTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38E7A5F91E8B3DD40079DE1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E7A6091E8B3DD40079DE1E /* LaunchScreen.storyboard in Resources */,
+				38E7A6061E8B3DD40079DE1E /* Assets.xcassets in Resources */,
+				38E7A6041E8B3DD40079DE1E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E7A60D1E8B3DD40079DE1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38E7A5F71E8B3DD40079DE1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E7A6011E8B3DD40079DE1E /* ViewController.swift in Sources */,
+				38E7A5FF1E8B3DD40079DE1E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E7A60B1E8B3DD40079DE1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E7A6141E8B3DD40079DE1E /* SmartFarmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38E7A6111E8B3DD40079DE1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38E7A5FA1E8B3DD40079DE1E /* SmartFarm */;
+			targetProxy = 38E7A6101E8B3DD40079DE1E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38E7A6021E8B3DD40079DE1E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E7A6031E8B3DD40079DE1E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38E7A6071E8B3DD40079DE1E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E7A6081E8B3DD40079DE1E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38E7A6161E8B3DD40079DE1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38E7A6171E8B3DD40079DE1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38E7A6191E8B3DD40079DE1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SmartFarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		38E7A61A1E8B3DD40079DE1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SmartFarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		38E7A61C1E8B3DD40079DE1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SmartFarmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartFarm.app/SmartFarm";
+			};
+			name = Debug;
+		};
+		38E7A61D1E8B3DD40079DE1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SmartFarmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartFarm.app/SmartFarm";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38E7A5F61E8B3DD40079DE1E /* Build configuration list for PBXProject "SmartFarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E7A6161E8B3DD40079DE1E /* Debug */,
+				38E7A6171E8B3DD40079DE1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38E7A6181E8B3DD40079DE1E /* Build configuration list for PBXNativeTarget "SmartFarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E7A6191E8B3DD40079DE1E /* Debug */,
+				38E7A61A1E8B3DD40079DE1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38E7A61B1E8B3DD40079DE1E /* Build configuration list for PBXNativeTarget "SmartFarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E7A61C1E8B3DD40079DE1E /* Debug */,
+				38E7A61D1E8B3DD40079DE1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38E7A5F31E8B3DD40079DE1E /* Project object */;
+}
