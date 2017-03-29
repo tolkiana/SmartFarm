@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AcceptanceTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>SmartFarm.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3826DD131E8B3ED900340C07</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>38E7A5FA1E8B3DD40079DE1E</key>
 		<dict>
 			<key>primary</key>

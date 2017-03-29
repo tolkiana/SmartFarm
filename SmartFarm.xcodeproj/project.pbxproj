@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3826DD181E8B3ED900340C07 /* AcceptanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826DD171E8B3ED900340C07 /* AcceptanceTests.m */; };
+		3826DD1B1E8B3ED900340C07 /* FixtureExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3826DD1A1E8B3ED900340C07 /* FixtureExample.swift */; };
 		38E7A5FF1E8B3DD40079DE1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */; };
 		38E7A6011E8B3DD40079DE1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A6001E8B3DD40079DE1E /* ViewController.swift */; };
 		38E7A6041E8B3DD40079DE1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6021E8B3DD40079DE1E /* Main.storyboard */; };
@@ -26,6 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3826DD141E8B3ED900340C07 /* AcceptanceTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcceptanceTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3826DD171E8B3ED900340C07 /* AcceptanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceTests.m; sourceTree = "<group>"; };
+		3826DD1A1E8B3ED900340C07 /* FixtureExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureExample.swift; sourceTree = "<group>"; };
+		3826DD1C1E8B3ED900340C07 /* SlimTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlimTables.h; sourceTree = "<group>"; };
+		3826DD1D1E8B3ED900340C07 /* AcceptanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		3826DD1E1E8B3ED900340C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38E7A5FB1E8B3DD40079DE1E /* SmartFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E7A6001E8B3DD40079DE1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3826DD101E8B3ED900340C07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38E7A5F81E8B3DD40079DE1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,11 +71,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3826DD151E8B3ED900340C07 /* AcceptanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				3826DD1E1E8B3ED900340C07 /* Info.plist */,
+				3826DD191E8B3ED900340C07 /* Fixtures */,
+				3826DD161E8B3ED900340C07 /* Supporting Files */,
+			);
+			path = AcceptanceTests;
+			sourceTree = "<group>";
+		};
+		3826DD161E8B3ED900340C07 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3826DD171E8B3ED900340C07 /* AcceptanceTests.m */,
+				3826DD1C1E8B3ED900340C07 /* SlimTables.h */,
+				3826DD1D1E8B3ED900340C07 /* AcceptanceTests-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3826DD191E8B3ED900340C07 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				3826DD1A1E8B3ED900340C07 /* FixtureExample.swift */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
 		38E7A5F21E8B3DD40079DE1E = {
 			isa = PBXGroup;
 			children = (
 				38E7A5FD1E8B3DD40079DE1E /* SmartFarm */,
 				38E7A6121E8B3DD40079DE1E /* SmartFarmTests */,
+				3826DD151E8B3ED900340C07 /* AcceptanceTests */,
 				38E7A5FC1E8B3DD40079DE1E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +114,7 @@
 			children = (
 				38E7A5FB1E8B3DD40079DE1E /* SmartFarm.app */,
 				38E7A60F1E8B3DD40079DE1E /* SmartFarmTests.xctest */,
+				3826DD141E8B3ED900340C07 /* AcceptanceTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +144,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3826DD131E8B3ED900340C07 /* AcceptanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3826DD211E8B3ED900340C07 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */;
+			buildPhases = (
+				3826DD0F1E8B3ED900340C07 /* Sources */,
+				3826DD101E8B3ED900340C07 /* Frameworks */,
+				3826DD111E8B3ED900340C07 /* Resources */,
+				3826DD121E8B3ED900340C07 /* [OCSP] Generate Fitnesse Test System Scripts */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AcceptanceTests;
+			productName = AcceptanceTests;
+			productReference = 3826DD141E8B3ED900340C07 /* AcceptanceTests.app */;
+			productType = "com.apple.product-type.application";
+		};
 		38E7A5FA1E8B3DD40079DE1E /* SmartFarm */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38E7A6181E8B3DD40079DE1E /* Build configuration list for PBXNativeTarget "SmartFarm" */;
@@ -144,6 +207,10 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Tolkiana;
 				TargetAttributes = {
+					3826DD131E8B3ED900340C07 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					38E7A5FA1E8B3DD40079DE1E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6ZX8Q22G36;
@@ -171,11 +238,19 @@
 			targets = (
 				38E7A5FA1E8B3DD40079DE1E /* SmartFarm */,
 				38E7A60E1E8B3DD40079DE1E /* SmartFarmTests */,
+				3826DD131E8B3ED900340C07 /* AcceptanceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3826DD111E8B3ED900340C07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38E7A5F91E8B3DD40079DE1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,7 +270,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3826DD121E8B3ED900340C07 /* [OCSP] Generate Fitnesse Test System Scripts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[OCSP] Generate Fitnesse Test System Scripts";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${OCSP_SUPPORT_FILE_DIR}/ocsp-generate-fitnesse-test-system-scripts.sh \"${OCSP_BUNDLE_RESOURCES_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		3826DD0F1E8B3ED900340C07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3826DD1B1E8B3ED900340C07 /* FixtureExample.swift in Sources */,
+				3826DD181E8B3ED900340C07 /* AcceptanceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38E7A5F71E8B3DD40079DE1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,6 +344,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3826DD1F1E8B3ED900340C07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AcceptanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.AcceptanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AcceptanceTests/AcceptanceTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0.1;
+			};
+			name = Debug;
+		};
+		3826DD201E8B3ED900340C07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AcceptanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.AcceptanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AcceptanceTests/AcceptanceTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0.1;
+			};
+			name = Release;
+		};
 		38E7A6161E8B3DD40079DE1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,6 +516,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3826DD211E8B3ED900340C07 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3826DD1F1E8B3ED900340C07 /* Debug */,
+				3826DD201E8B3ED900340C07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		38E7A5F61E8B3DD40079DE1E /* Build configuration list for PBXProject "SmartFarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -407,6 +540,7 @@
 				38E7A61A1E8B3DD40079DE1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38E7A61B1E8B3DD40079DE1E /* Build configuration list for PBXNativeTarget "SmartFarmTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +549,7 @@
 				38E7A61D1E8B3DD40079DE1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
