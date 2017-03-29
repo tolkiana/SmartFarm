@@ -15,6 +15,7 @@
 		38E7A6061E8B3DD40079DE1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6051E8B3DD40079DE1E /* Assets.xcassets */; };
 		38E7A6091E8B3DD40079DE1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6071E8B3DD40079DE1E /* LaunchScreen.storyboard */; };
 		38E7A6141E8B3DD40079DE1E /* SmartFarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A6131E8B3DD40079DE1E /* SmartFarmTests.swift */; };
+		6BD14E251ACCC47D111ACC27 /* libPods-AcceptanceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFFD553DFD43397B1E18FCE /* libPods-AcceptanceTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F029C959F2B879930FFA6E3 /* Pods-AcceptanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.release.xcconfig"; sourceTree = "<group>"; };
 		3826DD141E8B3ED900340C07 /* AcceptanceTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcceptanceTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3826DD171E8B3ED900340C07 /* AcceptanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceTests.m; sourceTree = "<group>"; };
 		3826DD1A1E8B3ED900340C07 /* FixtureExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureExample.swift; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		38E7A60F1E8B3DD40079DE1E /* SmartFarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartFarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E7A6131E8B3DD40079DE1E /* SmartFarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFarmTests.swift; sourceTree = "<group>"; };
 		38E7A6151E8B3DD40079DE1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA6AE8A17F29B560AE470F7 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAFFD553DFD43397B1E18FCE /* libPods-AcceptanceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AcceptanceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD14E251ACCC47D111ACC27 /* libPods-AcceptanceTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +111,8 @@
 				38E7A6121E8B3DD40079DE1E /* SmartFarmTests */,
 				3826DD151E8B3ED900340C07 /* AcceptanceTests */,
 				38E7A5FC1E8B3DD40079DE1E /* Products */,
+				7BBA08C028658E0271AD149C /* Pods */,
+				E65CE056BCBDAC55B3AE3816 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +148,23 @@
 			path = SmartFarmTests;
 			sourceTree = "<group>";
 		};
+		7BBA08C028658E0271AD149C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEA6AE8A17F29B560AE470F7 /* Pods-AcceptanceTests.debug.xcconfig */,
+				1F029C959F2B879930FFA6E3 /* Pods-AcceptanceTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E65CE056BCBDAC55B3AE3816 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAFFD553DFD43397B1E18FCE /* libPods-AcceptanceTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,10 +172,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3826DD211E8B3ED900340C07 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */;
 			buildPhases = (
+				7F89DD34BA087619C94AC334 /* [CP] Check Pods Manifest.lock */,
 				3826DD0F1E8B3ED900340C07 /* Sources */,
 				3826DD101E8B3ED900340C07 /* Frameworks */,
 				3826DD111E8B3ED900340C07 /* Resources */,
 				3826DD121E8B3ED900340C07 /* [OCSP] Generate Fitnesse Test System Scripts */,
+				F29A7BB47E4FB1FD56022D6B /* [CP] Embed Pods Frameworks */,
+				543038C4901D406D0F504733 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,6 +312,51 @@
 			shellPath = /bin/sh;
 			shellScript = "${OCSP_SUPPORT_FILE_DIR}/ocsp-generate-fitnesse-test-system-scripts.sh \"${OCSP_BUNDLE_RESOURCES_DIR}\"";
 		};
+		543038C4901D406D0F504733 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F89DD34BA087619C94AC334 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F29A7BB47E4FB1FD56022D6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -346,6 +418,7 @@
 /* Begin XCBuildConfiguration section */
 		3826DD1F1E8B3ED900340C07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEA6AE8A17F29B560AE470F7 /* Pods-AcceptanceTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = AcceptanceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -358,6 +431,7 @@
 		};
 		3826DD201E8B3ED900340C07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F029C959F2B879930FFA6E3 /* Pods-AcceptanceTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = AcceptanceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -523,6 +597,7 @@
 				3826DD201E8B3ED900340C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38E7A5F61E8B3DD40079DE1E /* Build configuration list for PBXProject "SmartFarm" */ = {
 			isa = XCConfigurationList;

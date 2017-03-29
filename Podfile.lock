@@ -1,0 +1,15 @@
+PODS:
+  - cslim (1.1.4)
+  - OCSlimProject (1.3):
+    - cslim
+
+DEPENDENCIES:
+  - OCSlimProject
+
+SPEC CHECKSUMS:
+  cslim: 43442b320273abf3542b5928c97425373ba7ee0a
+  OCSlimProject: a24337484ec168d7983ef507f75624bb8de21c15
+
+PODFILE CHECKSUM: 0556277affe6315947f2a87d707956566a080ae4
+
+COCOAPODS: 1.1.0.rc.2
