@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3826DD181E8B3ED900340C07 /* AcceptanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826DD171E8B3ED900340C07 /* AcceptanceTests.m */; };
-		3826DD1B1E8B3ED900340C07 /* FixtureExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3826DD1A1E8B3ED900340C07 /* FixtureExample.swift */; };
+		38CFE69F1E8F50C90084A2ED /* AddAnimalFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE69E1E8F50C90084A2ED /* AddAnimalFixture.swift */; };
+		38CFE6A11E8F53900084A2ED /* AddGoatFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6A01E8F53900084A2ED /* AddGoatFixture.swift */; };
+		38CFE6A31E8F53D10084A2ED /* RemoveAnimalFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6A21E8F53D10084A2ED /* RemoveAnimalFixture.swift */; };
+		38CFE6A51E8F53FA0084A2ED /* CheckoutFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6A41E8F53FA0084A2ED /* CheckoutFixture.swift */; };
 		38E7A5FF1E8B3DD40079DE1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */; };
 		38E7A6011E8B3DD40079DE1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A6001E8B3DD40079DE1E /* ViewController.swift */; };
 		38E7A6041E8B3DD40079DE1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6021E8B3DD40079DE1E /* Main.storyboard */; };
@@ -32,10 +35,13 @@
 		1F029C959F2B879930FFA6E3 /* Pods-AcceptanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.release.xcconfig"; sourceTree = "<group>"; };
 		3826DD141E8B3ED900340C07 /* AcceptanceTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcceptanceTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3826DD171E8B3ED900340C07 /* AcceptanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceTests.m; sourceTree = "<group>"; };
-		3826DD1A1E8B3ED900340C07 /* FixtureExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureExample.swift; sourceTree = "<group>"; };
 		3826DD1C1E8B3ED900340C07 /* SlimTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlimTables.h; sourceTree = "<group>"; };
 		3826DD1D1E8B3ED900340C07 /* AcceptanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		3826DD1E1E8B3ED900340C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38CFE69E1E8F50C90084A2ED /* AddAnimalFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAnimalFixture.swift; sourceTree = "<group>"; };
+		38CFE6A01E8F53900084A2ED /* AddGoatFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGoatFixture.swift; sourceTree = "<group>"; };
+		38CFE6A21E8F53D10084A2ED /* RemoveAnimalFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveAnimalFixture.swift; sourceTree = "<group>"; };
+		38CFE6A41E8F53FA0084A2ED /* CheckoutFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutFixture.swift; sourceTree = "<group>"; };
 		38E7A5FB1E8B3DD40079DE1E /* SmartFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E7A6001E8B3DD40079DE1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,9 +105,12 @@
 		3826DD191E8B3ED900340C07 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				3826DD1A1E8B3ED900340C07 /* FixtureExample.swift */,
+				38CFE69E1E8F50C90084A2ED /* AddAnimalFixture.swift */,
+				38CFE6A01E8F53900084A2ED /* AddGoatFixture.swift */,
+				38CFE6A21E8F53D10084A2ED /* RemoveAnimalFixture.swift */,
+				38CFE6A41E8F53FA0084A2ED /* CheckoutFixture.swift */,
 			);
-			name = Fixtures;
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		38E7A5F21E8B3DD40079DE1E = {
@@ -364,8 +373,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3826DD1B1E8B3ED900340C07 /* FixtureExample.swift in Sources */,
+				38CFE6A11E8F53900084A2ED /* AddGoatFixture.swift in Sources */,
+				38CFE69F1E8F50C90084A2ED /* AddAnimalFixture.swift in Sources */,
 				3826DD181E8B3ED900340C07 /* AcceptanceTests.m in Sources */,
+				38CFE6A51E8F53FA0084A2ED /* CheckoutFixture.swift in Sources */,
+				38CFE6A31E8F53D10084A2ED /* RemoveAnimalFixture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
