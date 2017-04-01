@@ -17,7 +17,6 @@
 		38E7A6041E8B3DD40079DE1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6021E8B3DD40079DE1E /* Main.storyboard */; };
 		38E7A6061E8B3DD40079DE1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6051E8B3DD40079DE1E /* Assets.xcassets */; };
 		38E7A6091E8B3DD40079DE1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6071E8B3DD40079DE1E /* LaunchScreen.storyboard */; };
-		38E7A6141E8B3DD40079DE1E /* SmartFarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A6131E8B3DD40079DE1E /* SmartFarmTests.swift */; };
 		6BD14E251ACCC47D111ACC27 /* libPods-AcceptanceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFFD553DFD43397B1E18FCE /* libPods-AcceptanceTests.a */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +49,6 @@
 		38E7A6081E8B3DD40079DE1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38E7A60A1E8B3DD40079DE1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38E7A60F1E8B3DD40079DE1E /* SmartFarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartFarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38E7A6131E8B3DD40079DE1E /* SmartFarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFarmTests.swift; sourceTree = "<group>"; };
 		38E7A6151E8B3DD40079DE1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEA6AE8A17F29B560AE470F7 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CAFFD553DFD43397B1E18FCE /* libPods-AcceptanceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AcceptanceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,7 +149,6 @@
 		38E7A6121E8B3DD40079DE1E /* SmartFarmTests */ = {
 			isa = PBXGroup;
 			children = (
-				38E7A6131E8B3DD40079DE1E /* SmartFarmTests.swift */,
 				38E7A6151E8B3DD40079DE1E /* Info.plist */,
 			);
 			path = SmartFarmTests;
@@ -394,7 +391,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E7A6141E8B3DD40079DE1E /* SmartFarmTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
