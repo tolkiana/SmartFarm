@@ -17,6 +17,7 @@
 		38CFE6B31E90587B0084A2ED /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6B21E90587B0084A2ED /* Animal.swift */; };
 		38CFE6B51E9059C70084A2ED /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6B41E9059C70084A2ED /* CartItem.swift */; };
 		38CFE6B71E905A6F0084A2ED /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6B61E905A6F0084A2ED /* StoreItem.swift */; };
+		38CFE6BC1E905ECE0084A2ED /* AnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6BB1E905ECE0084A2ED /* AnimalTests.swift */; };
 		38E7A5FF1E8B3DD40079DE1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */; };
 		38E7A6041E8B3DD40079DE1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6021E8B3DD40079DE1E /* Main.storyboard */; };
 		38E7A6061E8B3DD40079DE1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6051E8B3DD40079DE1E /* Assets.xcassets */; };
@@ -50,6 +51,8 @@
 		38CFE6B21E90587B0084A2ED /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		38CFE6B41E9059C70084A2ED /* CartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		38CFE6B61E905A6F0084A2ED /* StoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
+		38CFE6BA1E905ECE0084A2ED /* SmartFarmTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SmartFarmTests-Bridging-Header.h"; path = "Models/SmartFarmTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		38CFE6BB1E905ECE0084A2ED /* AnimalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalTests.swift; sourceTree = "<group>"; };
 		38E7A5FB1E8B3DD40079DE1E /* SmartFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E7A6031E8B3DD40079DE1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		38CFE6AD1E90565C0084A2ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				38CFE6BB1E905ECE0084A2ED /* AnimalTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,6 +225,7 @@
 		38E7A6121E8B3DD40079DE1E /* SmartFarmTests */ = {
 			isa = PBXGroup;
 			children = (
+				38CFE6BA1E905ECE0084A2ED /* SmartFarmTests-Bridging-Header.h */,
 				38CFE6AF1E90566A0084A2ED /* Services */,
 				38CFE6AE1E9056630084A2ED /* ViewModels */,
 				38CFE6AD1E90565C0084A2ED /* Models */,
@@ -327,6 +332,7 @@
 					};
 					38E7A60E1E8B3DD40079DE1E = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 38E7A5FA1E8B3DD40079DE1E;
 					};
@@ -471,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38CFE6BC1E905ECE0084A2ED /* AnimalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,10 +659,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SmartFarmTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartFarmTests/Models/SmartFarmTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartFarm.app/SmartFarm";
 			};
@@ -666,10 +676,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SmartFarmTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartFarmTests/Models/SmartFarmTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartFarm.app/SmartFarm";
 			};
