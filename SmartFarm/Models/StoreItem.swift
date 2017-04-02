@@ -11,7 +11,7 @@ import Foundation
 struct StoreItem {
     var id: String
     var name: String
-    var imageName: String
+    var icon: String
     var price: Float
     var category: Category
     var numberAvailable: Int
