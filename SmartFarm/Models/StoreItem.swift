@@ -8,7 +8,11 @@
 
 import Foundation
 
-protocol StoreItem {
-    var price: Float { set get }
-    var description: String { get }
+struct StoreItem {
+    var id: String
+    var name: String
+    var imageName: String
+    var price: Float
+    var category: Category
+    var numberAvailable: Int
 }
