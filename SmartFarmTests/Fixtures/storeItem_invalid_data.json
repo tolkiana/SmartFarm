@@ -1,0 +1,55 @@
+{
+    "menu": [{
+             "animals": [{
+                         "code": [],
+                         "name": 123,
+                         "image": true,
+                         "price": 100.0,
+                         "numberAvailable": 8
+                         }, {
+                         "code": [],
+                         "name": 123,
+                         "image": "",
+                         "price": 50.0,
+                         "numberAvailable": 3
+                         }, {
+                         "code": "003",
+                         "name": "goat",
+                         "image": "🐐",
+                         "price": 50.0,
+                         "numberAvailable": 0
+                         }, {
+                         "code": "004",
+                         "name": "horse",
+                         "image": "🐴",
+                         "price": 12.0,
+                         "numberAvailable": 0
+                         }, {
+                         "code": "005",
+                         "name": "chicken",
+                         "image": "🐓",
+                         "price": 10.0,
+                         "numberAvailable": 0
+                         }, {
+                         "code": "006",
+                         "name": "turkey",
+                         "image": "🦃",
+                         "price": 20.0,
+                         "numberAvailable": 0
+                         }]
+             }, {
+             "vegatables": [{
+                            "code": "004",
+                            "name": "corn",
+                            "image": "🌽",
+                            "price": 10.0,
+                            "numberAvailable": 5
+                            }, {
+                            "code": "003",
+                            "name": "tomato",
+                            "image": "🍎",
+                            "price": 5.0,
+                            "numberAvailable": 10
+                            }]
+             }]
+}
