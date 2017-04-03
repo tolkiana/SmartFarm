@@ -9,7 +9,7 @@
 import Foundation
 
 struct StoreItem {
-    var id: String
+    var code: String
     var name: String
     var icon: String
     var price: Float
