@@ -56,7 +56,6 @@
 		38CFE6AA1E9056470084A2ED /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		38CFE6B41E9059C70084A2ED /* CartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		38CFE6B61E905A6F0084A2ED /* StoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
-		38CFE6BA1E905ECE0084A2ED /* SmartFarmTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SmartFarmTests-Bridging-Header.h"; path = "Models/SmartFarmTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		38CFE6C11E906BA80084A2ED /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		38CFE6C51E91D76E0084A2ED /* SerializationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationError.swift; sourceTree = "<group>"; };
 		38CFE6CB1E91DBBA0084A2ED /* CategoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTests.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		38CFE6D71E91E89D0084A2ED /* category_missing_keys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category_missing_keys.json; sourceTree = "<group>"; };
 		38CFE6D81E91E89D0084A2ED /* storeItem_invalid_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = storeItem_invalid_data.json; sourceTree = "<group>"; };
 		38CFE6D91E91E89D0084A2ED /* storeItem_missing_keys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = storeItem_missing_keys.json; sourceTree = "<group>"; };
+		38CFE6DE1E91E9D00084A2ED /* SmartFarmTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SmartFarmTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		38E7A5FB1E8B3DD40079DE1E /* SmartFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E7A6031E8B3DD40079DE1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -253,7 +253,7 @@
 		38E7A6121E8B3DD40079DE1E /* SmartFarmTests */ = {
 			isa = PBXGroup;
 			children = (
-				38CFE6BA1E905ECE0084A2ED /* SmartFarmTests-Bridging-Header.h */,
+				38CFE6DE1E91E9D00084A2ED /* SmartFarmTests-Bridging-Header.h */,
 				38CFE6D11E91DCB40084A2ED /* Fixtures */,
 				38CFE6AF1E90566A0084A2ED /* Services */,
 				38CFE6AE1E9056630084A2ED /* ViewModels */,
@@ -700,7 +700,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SmartFarmTests/Models/SmartFarmTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartFarmTests/SmartFarmTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartFarm.app/SmartFarm";
@@ -717,7 +717,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SmartFarmTests/Models/SmartFarmTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartFarmTests/SmartFarmTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartFarm.app/SmartFarm";
 			};
