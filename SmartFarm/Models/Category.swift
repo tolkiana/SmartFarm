@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Category: String {
-    case animal
-    case vegetable
+struct Category {
+    var code: String
+    var name: String
 }
