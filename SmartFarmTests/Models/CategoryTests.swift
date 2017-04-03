@@ -12,7 +12,6 @@ import XCTest
 class CategoryTests: XCTestCase {
     
     func test_successfull_initialization() {
-        let category = Category(
     }
     
     func test_failed_initialization_due_missing_key() {
