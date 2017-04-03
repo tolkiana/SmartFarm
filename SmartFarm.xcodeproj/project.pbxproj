@@ -25,6 +25,7 @@
 		38CFE6DB1E91E89D0084A2ED /* category_missing_keys.json in Resources */ = {isa = PBXBuildFile; fileRef = 38CFE6D71E91E89D0084A2ED /* category_missing_keys.json */; };
 		38CFE6DC1E91E89D0084A2ED /* storeItem_invalid_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 38CFE6D81E91E89D0084A2ED /* storeItem_invalid_data.json */; };
 		38CFE6DD1E91E89D0084A2ED /* storeItem_missing_keys.json in Resources */ = {isa = PBXBuildFile; fileRef = 38CFE6D91E91E89D0084A2ED /* storeItem_missing_keys.json */; };
+		38CFE6E11E91EAB80084A2ED /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6E01E91EAB80084A2ED /* JSONReader.swift */; };
 		38E7A5FF1E8B3DD40079DE1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */; };
 		38E7A6041E8B3DD40079DE1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6021E8B3DD40079DE1E /* Main.storyboard */; };
 		38E7A6061E8B3DD40079DE1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6051E8B3DD40079DE1E /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		38CFE6D81E91E89D0084A2ED /* storeItem_invalid_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = storeItem_invalid_data.json; sourceTree = "<group>"; };
 		38CFE6D91E91E89D0084A2ED /* storeItem_missing_keys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = storeItem_missing_keys.json; sourceTree = "<group>"; };
 		38CFE6DE1E91E9D00084A2ED /* SmartFarmTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SmartFarmTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		38CFE6E01E91EAB80084A2ED /* JSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONReader.swift; sourceTree = "<group>"; };
 		38E7A5FB1E8B3DD40079DE1E /* SmartFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E7A5FE1E8B3DD40079DE1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E7A6031E8B3DD40079DE1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -212,6 +214,14 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		38CFE6DF1E91EA620084A2ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				38CFE6E01E91EAB80084A2ED /* JSONReader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		38E7A5F21E8B3DD40079DE1E = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				38CFE6DE1E91E9D00084A2ED /* SmartFarmTests-Bridging-Header.h */,
+				38CFE6DF1E91EA620084A2ED /* Helpers */,
 				38CFE6D11E91DCB40084A2ED /* Fixtures */,
 				38CFE6AF1E90566A0084A2ED /* Services */,
 				38CFE6AE1E9056630084A2ED /* ViewModels */,
@@ -513,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38CFE6CE1E91DBD50084A2ED /* StoreItemTests.swift in Sources */,
+				38CFE6E11E91EAB80084A2ED /* JSONReader.swift in Sources */,
 				38CFE6CC1E91DBBA0084A2ED /* CategoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
