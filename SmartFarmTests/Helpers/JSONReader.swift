@@ -10,7 +10,7 @@ import Foundation
 
 class JSONReader {
     
-    func dictionaryForJSON(fileName: String) -> [String: AnyObject] {
+    func dictionary(fromJSONfile fileName: String) -> [String: AnyObject] {
         let JSONPath = Bundle(for: type(of: self)).path(forResource: fileName, ofType: "json")
         var dictionaryFromServer: [String: AnyObject] = [:]
         do {
@@ -24,7 +24,7 @@ class JSONReader {
         return dictionaryFromServer
     }
     
-    func arrayForJSON(fileName: String) -> [[String: AnyObject]] {
+    func array(fromJSONfile fileName: String) -> [[String: AnyObject]] {
         let JSONPath = Bundle(for: type(of: self)).path(forResource: fileName, ofType: "json")
         var arrayFromServer: [[String: AnyObject]] = []
         do {
