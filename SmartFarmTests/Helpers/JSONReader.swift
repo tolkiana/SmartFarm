@@ -10,28 +10,28 @@ import Foundation
 
 class JSONReader {
     
-    static func dictionary(fromJSONfile fileName: String) -> [String: AnyObject] {
+    static func dictionary(fromJSONfile fileName: String) -> [String: Any] {
         let JSONPath = Bundle(for: JSONReader.self).path(forResource: fileName, ofType: "json")
-        var dictionaryFromServer: [String: AnyObject] = [:]
+        var dictionaryFromServer: [String: Any] = [:]
         do {
             dictionaryFromServer = try JSONSerialization.jsonObject(
                 with: NSData(contentsOfFile: JSONPath!)! as Data,
                 options: JSONSerialization.ReadingOptions.mutableContainers
-                ) as! [String: AnyObject]
+                ) as! [String: Any]
         } catch {
             // Do nothing
         }
         return dictionaryFromServer
     }
     
-    static func array(fromJSONfile fileName: String) -> [[String: AnyObject]] {
+    static func array(fromJSONfile fileName: String) -> [[String: Any]] {
         let JSONPath = Bundle(for: JSONReader.self).path(forResource: fileName, ofType: "json")
-        var arrayFromServer: [[String: AnyObject]] = []
+        var arrayFromServer: [[String: Any]] = []
         do {
             arrayFromServer = try JSONSerialization.jsonObject(
                 with: NSData(contentsOfFile: JSONPath!)! as Data,
                 options: JSONSerialization.ReadingOptions.mutableContainers
-                ) as! [[String: AnyObject]]
+                ) as! [[String: Any]]
         } catch {
             // Do nothing
         }
