@@ -1,5 +1,4 @@
-{
-    "menu": [{
+[{
              "animals": [{
                          "image": "🐮",
                          "price": 100.0,
@@ -46,5 +45,4 @@
                             "price": 5.0,
                             "numberAvailable": 10
                             }]
-             }]
-}
+}]
