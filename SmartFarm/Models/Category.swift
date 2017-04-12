@@ -16,16 +16,10 @@ struct Category {
 extension Category {
 
     init(json: [String: Any]) throws {
-        guard let rawCode = json["code"] else {
+        guard let rawCode = json["code"], let rawName = json["name"] else {
             throw SerializationError.missing
         }
-        guard let rawName = json["name"] else {
-            throw SerializationError.missing
-        }
-        guard let code = rawCode as? String else {
-            throw SerializationError.invalid
-        }
-        guard let name = rawName as? String else {
+        guard let code = rawCode as? String, let name = rawName as? String else {
             throw SerializationError.invalid
         }
         self.code = code
