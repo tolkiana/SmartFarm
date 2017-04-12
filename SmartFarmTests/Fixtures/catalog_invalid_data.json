@@ -1,0 +1,24 @@
+ [
+      {
+      "code": "001",
+      "name": true,
+      "items": {}
+      },
+      {
+      "code": 123,
+      "name": "vegetables",
+      "items": [{
+                "code": 123,
+                "name": true,
+                "image": "",
+                "price": "10.0",
+                "numberAvailable": 5
+                }, {
+                "code": "003",
+                "name": "tomato",
+                "image": "🍎",
+                "price": 5.0,
+                "numberAvailable": 10
+                }]
+      }
+  ]
