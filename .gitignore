@@ -35,6 +35,6 @@ xcuserdata/
 
 #Fitnesse
 
-FitnesseRoot/
-LaunchFitnesse
-OCSlimProjectTestRunner*
+#FitnesseRoot/
+#LaunchFitnesse
+#OCSlimProjectTestRunner*
