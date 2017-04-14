@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3826DD181E8B3ED900340C07 /* AcceptanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826DD171E8B3ED900340C07 /* AcceptanceTests.m */; };
+		3884FF1F1EA1494100AD1E20 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3884FF1E1EA1494100AD1E20 /* NetworkManager.swift */; };
 		38CFE69F1E8F50C90084A2ED /* AddAnimalFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE69E1E8F50C90084A2ED /* AddAnimalFixture.swift */; };
 		38CFE6A11E8F53900084A2ED /* AddGoatFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6A01E8F53900084A2ED /* AddGoatFixture.swift */; };
 		38CFE6A31E8F53D10084A2ED /* RemoveAnimalFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6A21E8F53D10084A2ED /* RemoveAnimalFixture.swift */; };
@@ -47,6 +48,7 @@
 		3826DD1C1E8B3ED900340C07 /* SlimTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlimTables.h; sourceTree = "<group>"; };
 		3826DD1D1E8B3ED900340C07 /* AcceptanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		3826DD1E1E8B3ED900340C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3884FF1E1EA1494100AD1E20 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		38CFE69E1E8F50C90084A2ED /* AddAnimalFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAnimalFixture.swift; sourceTree = "<group>"; };
 		38CFE6A01E8F53900084A2ED /* AddGoatFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGoatFixture.swift; sourceTree = "<group>"; };
 		38CFE6A21E8F53D10084A2ED /* RemoveAnimalFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveAnimalFixture.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 				38CFE6A41E8F53FA0084A2ED /* CheckoutFixture.swift */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		3884FF1D1EA1490E00AD1E20 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3884FF1E1EA1494100AD1E20 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		38CFE6A61E9055D60084A2ED /* ViewControllers */ = {
@@ -238,6 +248,7 @@
 		38E7A5FD1E8B3DD40079DE1E /* SmartFarm */ = {
 			isa = PBXGroup;
 			children = (
+				3884FF1D1EA1490E00AD1E20 /* Network */,
 				38CFE6A91E9055FC0084A2ED /* Services */,
 				38CFE6A81E9055F10084A2ED /* ViewModels */,
 				38CFE6A71E9055E90084A2ED /* Models */,
@@ -501,6 +512,7 @@
 				38CFE6B71E905A6F0084A2ED /* StoreItem.swift in Sources */,
 				38CFE6C21E906BA80084A2ED /* Category.swift in Sources */,
 				38CFE6AB1E9056470084A2ED /* ViewController.swift in Sources */,
+				3884FF1F1EA1494100AD1E20 /* NetworkManager.swift in Sources */,
 				38CFE6C61E91D76E0084A2ED /* SerializationError.swift in Sources */,
 				38CFE6B51E9059C70084A2ED /* CartItem.swift in Sources */,
 				38E7A5FF1E8B3DD40079DE1E /* AppDelegate.swift in Sources */,
