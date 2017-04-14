@@ -39,6 +39,17 @@
       },
         {
         "code": "002",
-        "name": "vegetables"
+        "name": "vegetables",
+        "items": [{
+                "image": "",
+                "price": 10.0,
+                "numberAvailable": 5
+                }, {
+                "code": "003",
+                "name": "tomato",
+                "image": "🍎",
+                "price": 5.0,
+                "numberAvailable": 10
+                }]
         }
   ]

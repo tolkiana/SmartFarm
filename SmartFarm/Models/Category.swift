@@ -33,7 +33,9 @@ extension Category {
             do {
                 try items.append(StoreItem(json: jsonItem))
             }
-            catch {}
+            catch {
+                throw error
+            }
         }
         self.code = code
         self.name = name
