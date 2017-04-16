@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/cslim/cslim.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Mockingjay/Mockingjay.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/URITemplate/URITemplate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/cslim/cslim.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Mockingjay/Mockingjay.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/URITemplate/URITemplate.framework"
 fi
