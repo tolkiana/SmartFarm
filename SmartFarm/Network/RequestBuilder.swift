@@ -19,6 +19,10 @@ struct RequestBuilder {
         return baseRequest(endPoint: endPoint, headers: headers)
     }
     
+    func getRequest(endPoint: String) -> URLRequest? {
+        return baseRequest(endPoint: endPoint, headers: nil)
+    }
+    
     func postRequest(endPoint: String, parameters:[String: Any], headers: [String: String]?) -> URLRequest? {
         var request = baseRequest(endPoint: endPoint, headers: headers)
         request?.httpMethod = HTTPMethod.post.rawValue
@@ -26,6 +30,12 @@ struct RequestBuilder {
                                                         options: JSONSerialization.WritingOptions.prettyPrinted)
         return request
     }
+    
+    func postRequest(endPoint: String, parameters:[String: Any]) -> URLRequest? {
+        return postRequest(endPoint: endPoint, parameters: parameters, headers: nil)
+    }
+    
+    // MARK: Private
     
     private func baseRequest(endPoint: String, headers: [String: String]?) -> URLRequest? {
         guard let url = URL(string: self.baseURL + endPoint) else {

@@ -11,6 +11,7 @@
 		3884FF1F1EA1494100AD1E20 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3884FF1E1EA1494100AD1E20 /* NetworkManager.swift */; };
 		38CDE95C1EA2F18900ABAB28 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CDE95B1EA2F18900ABAB28 /* RequestBuilder.swift */; };
 		38CDE95E1EA2F1E600ABAB28 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CDE95D1EA2F1E600ABAB28 /* HTTPMethod.swift */; };
+		38CDE9631EA83E2400ABAB28 /* BuilderRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CDE9621EA83E2400ABAB28 /* BuilderRequestTests.swift */; };
 		38CFE69F1E8F50C90084A2ED /* AddAnimalFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE69E1E8F50C90084A2ED /* AddAnimalFixture.swift */; };
 		38CFE6A11E8F53900084A2ED /* AddGoatFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6A01E8F53900084A2ED /* AddGoatFixture.swift */; };
 		38CFE6A31E8F53D10084A2ED /* RemoveAnimalFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6A21E8F53D10084A2ED /* RemoveAnimalFixture.swift */; };
@@ -55,6 +56,7 @@
 		3884FF1E1EA1494100AD1E20 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		38CDE95B1EA2F18900ABAB28 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		38CDE95D1EA2F1E600ABAB28 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		38CDE9621EA83E2400ABAB28 /* BuilderRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderRequestTests.swift; sourceTree = "<group>"; };
 		38CFE69E1E8F50C90084A2ED /* AddAnimalFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAnimalFixture.swift; sourceTree = "<group>"; };
 		38CFE6A01E8F53900084A2ED /* AddGoatFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGoatFixture.swift; sourceTree = "<group>"; };
 		38CFE6A21E8F53D10084A2ED /* RemoveAnimalFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveAnimalFixture.swift; sourceTree = "<group>"; };
@@ -149,6 +151,14 @@
 				3884FF1E1EA1494100AD1E20 /* NetworkManager.swift */,
 				38CDE95B1EA2F18900ABAB28 /* RequestBuilder.swift */,
 				38CDE95D1EA2F1E600ABAB28 /* HTTPMethod.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		38CDE9611EA83C8A00ABAB28 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				38CDE9621EA83E2400ABAB28 /* BuilderRequestTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -276,6 +286,7 @@
 		38E7A6121E8B3DD40079DE1E /* SmartFarmTests */ = {
 			isa = PBXGroup;
 			children = (
+				38CDE9611EA83C8A00ABAB28 /* Network */,
 				38CFE6DE1E91E9D00084A2ED /* SmartFarmTests-Bridging-Header.h */,
 				38CFE6DF1E91EA620084A2ED /* Helpers */,
 				38CFE6D11E91DCB40084A2ED /* Fixtures */,
@@ -590,6 +601,7 @@
 				38CFE6CE1E91DBD50084A2ED /* StoreItemTests.swift in Sources */,
 				38CFE6E11E91EAB80084A2ED /* JSONReader.swift in Sources */,
 				38CFE6CC1E91DBBA0084A2ED /* CategoryTests.swift in Sources */,
+				38CDE9631EA83E2400ABAB28 /* BuilderRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
