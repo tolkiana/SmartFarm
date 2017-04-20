@@ -15,17 +15,19 @@ struct RequestBuilder {
         self.baseURL = baseURL
     }
     
-    func request(withRequestInfo requestInfo: RequestInfo) -> URLRequest? {
-        var request = buildRequest(endPoint: requestInfo.endpoint, headers: requestInfo.headers)
-        request?.httpMethod = requestInfo.method.rawValue
-        if let parameters = requestInfo.parameters {
-            request?.httpBody = try? JSONSerialization.data(withJSONObject: parameters,
-                                                            options: JSONSerialization.WritingOptions.prettyPrinted)
-        }
+    func getRequest(endPoint: String, headers: [String: String]?) -> URLRequest? {
+        return baseRequest(endPoint: endPoint, headers: headers)
+    }
+    
+    func postRequest(endPoint: String, parameters:[String: Any], headers: [String: String]?) -> URLRequest? {
+        var request = baseRequest(endPoint: endPoint, headers: headers)
+        request?.httpMethod = HTTPMethod.post.rawValue
+        request?.httpBody = try? JSONSerialization.data(withJSONObject: parameters,
+                                                        options: JSONSerialization.WritingOptions.prettyPrinted)
         return request
     }
     
-    private func buildRequest(endPoint: String, headers: [String: String]?) -> URLRequest? {
+    private func baseRequest(endPoint: String, headers: [String: String]?) -> URLRequest? {
         guard let url = URL(string: self.baseURL + endPoint) else {
             return nil
         }
