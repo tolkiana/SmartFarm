@@ -25,6 +25,7 @@ struct RequestBuilder {
     
     func postRequest(endPoint: String, parameters:[String: Any], headers: [String: String]?) -> URLRequest? {
         var request = baseRequest(endPoint: endPoint, headers: headers)
+        request?.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request?.httpMethod = HTTPMethod.post.rawValue
         request?.httpBody = try? JSONSerialization.data(withJSONObject: parameters,
                                                         options: JSONSerialization.WritingOptions.prettyPrinted)
