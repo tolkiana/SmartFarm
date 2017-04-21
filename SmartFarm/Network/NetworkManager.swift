@@ -8,6 +8,14 @@
 
 import Foundation
 
-class NetworkManager {
+struct NetworkManager {
     
+    static func execute(request: URLRequest, completion: (ResultType<[String: Any]>) -> Void) {
+        let tastk = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                return completion(ResultType.failure(error))
+            }
+        }
+        tastk.resume()
+    }
 }
