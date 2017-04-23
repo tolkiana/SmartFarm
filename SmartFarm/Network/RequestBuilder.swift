@@ -15,12 +15,16 @@ struct RequestBuilder {
         self.baseURL = baseURL
     }
     
-    func getRequest(endPoint: String, headers: [String: String]?) -> URLRequest? {
-        return baseRequest(endPoint: endPoint, headers: headers)
-    }
-    
     func getRequest(endPoint: String) -> URLRequest? {
         return baseRequest(endPoint: endPoint, headers: nil)
+    }
+    
+    func postRequest(endPoint: String, parameters:[String: Any]) -> URLRequest? {
+        return postRequest(endPoint: endPoint, parameters: parameters, headers: nil)
+    }
+    
+    func getRequest(endPoint: String, headers: [String: String]?) -> URLRequest? {
+        return baseRequest(endPoint: endPoint, headers: headers)
     }
     
     func postRequest(endPoint: String, parameters:[String: Any], headers: [String: String]?) -> URLRequest? {
@@ -32,10 +36,7 @@ struct RequestBuilder {
         return request
     }
     
-    func postRequest(endPoint: String, parameters:[String: Any]) -> URLRequest? {
-        return postRequest(endPoint: endPoint, parameters: parameters, headers: nil)
-    }
-    
+
     // MARK: Private
     
     private func baseRequest(endPoint: String, headers: [String: String]?) -> URLRequest? {
