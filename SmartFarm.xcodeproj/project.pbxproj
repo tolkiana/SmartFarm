@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3826DD181E8B3ED900340C07 /* AcceptanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826DD171E8B3ED900340C07 /* AcceptanceTests.m */; };
-		3833E7281EA95B26003EDA66 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3833E7271EA95B26003EDA66 /* ResultType.swift */; };
 		3884FF1F1EA1494100AD1E20 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3884FF1E1EA1494100AD1E20 /* NetworkManager.swift */; };
-		38BF48991EA9704200C54F3D /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BF48981EA9704200C54F3D /* ResultType.swift */; };
 		38BF489B1EA970E400C54F3D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BF489A1EA970E400C54F3D /* NetworkError.swift */; };
 		38CDE95C1EA2F18900ABAB28 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CDE95B1EA2F18900ABAB28 /* RequestBuilder.swift */; };
 		38CDE95E1EA2F1E600ABAB28 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CDE95D1EA2F1E600ABAB28 /* HTTPMethod.swift */; };
@@ -34,6 +32,7 @@
 		38E7A6041E8B3DD40079DE1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6021E8B3DD40079DE1E /* Main.storyboard */; };
 		38E7A6061E8B3DD40079DE1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6051E8B3DD40079DE1E /* Assets.xcassets */; };
 		38E7A6091E8B3DD40079DE1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E7A6071E8B3DD40079DE1E /* LaunchScreen.storyboard */; };
+		38F6534B1EAC3EA000E08FB6 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BF48981EA9704200C54F3D /* ResultType.swift */; };
 		3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */; };
 		4AE6CDE934B89F083854D5D9 /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC154B762F6CA320EA0614C8 /* Pods_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,7 +55,6 @@
 		3826DD1C1E8B3ED900340C07 /* SlimTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlimTables.h; sourceTree = "<group>"; };
 		3826DD1D1E8B3ED900340C07 /* AcceptanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		3826DD1E1E8B3ED900340C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3833E7271EA95B26003EDA66 /* ResultType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		3884FF1E1EA1494100AD1E20 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		38BF48981EA9704200C54F3D /* ResultType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		38BF489A1EA970E400C54F3D /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -594,13 +592,12 @@
 				38CFE6C21E906BA80084A2ED /* Category.swift in Sources */,
 				38CFE6AB1E9056470084A2ED /* ViewController.swift in Sources */,
 				3884FF1F1EA1494100AD1E20 /* NetworkManager.swift in Sources */,
-				3833E7281EA95B26003EDA66 /* ResultType.swift in Sources */,
+				38F6534B1EAC3EA000E08FB6 /* ResultType.swift in Sources */,
 				38CFE6C61E91D76E0084A2ED /* SerializationError.swift in Sources */,
 				38CDE95E1EA2F1E600ABAB28 /* HTTPMethod.swift in Sources */,
 				38CFE6B51E9059C70084A2ED /* CartItem.swift in Sources */,
 				38E7A5FF1E8B3DD40079DE1E /* AppDelegate.swift in Sources */,
 				38BF489B1EA970E400C54F3D /* NetworkError.swift in Sources */,
-				38BF48991EA9704200C54F3D /* ResultType.swift in Sources */,
 				38CDE95C1EA2F18900ABAB28 /* RequestBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
