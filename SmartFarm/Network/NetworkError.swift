@@ -13,7 +13,7 @@ enum NetworkError: Error {
     case noData
     case badRequest
     case forbidden
-    case parse
+    case serialization
     case noResponse
     case unknown
     

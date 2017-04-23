@@ -10,12 +10,40 @@ import Foundation
 
 struct NetworkManager {
     
-    static func execute(request: URLRequest, completion: (ResultType<[String: Any]>) -> Void) {
-        let tastk = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                return completion(ResultType.failure(error))
+    static func execute(request: URLRequest, completion: @escaping (ResultType<[String: Any]>) -> Void) {
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard error == nil else {
+                completion(ResultType.failure(error!))
+                return
             }
+            guard let HTTPResponse = response as? HTTPURLResponse else {
+                completion(ResultType.failure(NetworkError.noResponse))
+                return
+            }
+            guard HTTPResponse.statusCode >= 200 && HTTPResponse.statusCode < 300 else {
+                completion(ResultType.failure(NetworkError(code: HTTPResponse.statusCode)))
+                return
+            }
+            guard let data = data else {
+                completion(ResultType.failure(NetworkError.noData))
+                return
+            }
+            guard let json = serialize(data: data) else {
+                completion(ResultType.failure(NetworkError.serialization))
+                return
+            }
+            completion(ResultType.success(json))
         }
-        tastk.resume()
+        task.resume()
+    }
+    
+    // MARK: Private
+    
+    private static func serialize(data: Data) -> [String: Any]? {
+        let raw = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        guard let json = raw as? [String: Any] else {
+            return nil
+        }
+        return json
     }
 }
