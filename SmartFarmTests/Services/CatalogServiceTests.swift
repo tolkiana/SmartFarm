@@ -7,8 +7,38 @@
 //
 
 import XCTest
+@testable import SmartFarm
 
 class CatalogServiceTests: XCTestCase {
     
     
+    
+    
+    func testAllCategories() {
+    
+    }
+    
+    func testAllItems() {
+        
+    }
+    
+    func testCategoryWithCode() {
+    
+    }
+    
+    func testItemsForCategory() {
+    
+    }
+    
+    func testItemWithCode() {
+    
+    }
+    
+    func totalItemsForCategory() {
+    
+    }
+    
+    func totalItems() {
+    
+    }
 }
