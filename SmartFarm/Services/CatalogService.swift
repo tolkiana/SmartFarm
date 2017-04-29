@@ -8,11 +8,24 @@
 
 import Foundation
 
-struct CatalogService {
-    typealias Code = String
+class CatalogService {
+    static let shared = CatalogService()
+    private init() {}
     
-    var categories: [Category]
-    var items: [StoreItem]
+    typealias Code = String
+    private var categories: [Category]?
+    
+    func loadData(completion: @escaping (ResultType<Any>) -> Void) {
+        
+    }
+    
+    func allCategories() -> [Category]? {
+        return nil
+    }
+    
+    func allItems() -> [StoreItem]? {
+        return nil
+    }
     
     func category(with: Code) -> Category? {
         return nil
@@ -31,7 +44,7 @@ struct CatalogService {
     }
     
     func totalItems() -> Int {
-        return items.count
+        return 0
     }
     
 }
