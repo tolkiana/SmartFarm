@@ -8,43 +8,22 @@
 
 import Foundation
 
-class CatalogService {
+class CatalogService: CatalogProtocol {
+    private var categories: [Category]?
+   
+    // MARK: - Singleton
+    
     static let shared = CatalogService()
     private init() {}
     
-    typealias Code = String
-    private var categories: [Category]?
     
     func loadData(completion: @escaping (ResultType<Any>) -> Void) {
         
     }
     
+    // MARK: - Protocol Implementation
+    
     func allCategories() -> [Category]? {
-        return nil
+        return categories
     }
-    
-    func allItems() -> [StoreItem]? {
-        return nil
-    }
-    
-    func category(with: Code) -> Category? {
-        return nil
-    }
-    
-    func items(`for` category: Category) -> [StoreItem]? {
-        return nil
-    }
-    
-    func item(with: Code) -> StoreItem? {
-        return nil
-    }
-    
-    func totalItems(`for` category: Category) -> Int {
-        return category.items.count
-    }
-    
-    func totalItems() -> Int {
-        return 0
-    }
-    
 }
