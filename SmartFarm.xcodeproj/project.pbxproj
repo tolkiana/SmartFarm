@@ -38,6 +38,11 @@
 		38F653511EAC465E00E08FB6 /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F653501EAC465E00E08FB6 /* CartService.swift */; };
 		38F653551EAC4DAD00E08FB6 /* CatalogServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F653541EAC4DAD00E08FB6 /* CatalogServiceTests.swift */; };
 		38F653571EAC4DBF00E08FB6 /* CartServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F653561EAC4DBF00E08FB6 /* CartServiceTests.swift */; };
+		38F6535D1EB196FB00E08FB6 /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6535C1EB196FB00E08FB6 /* MockFactory.swift */; };
+		38F7A7C41EB51B830034DA9E /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6B41E9059C70084A2ED /* CartItem.swift */; };
+		38F7A7C51EB51B860034DA9E /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6B61E905A6F0084A2ED /* StoreItem.swift */; };
+		38F7A7C61EB51B890034DA9E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6C11E906BA80084A2ED /* Category.swift */; };
+		38F7A7C71EB51B8C0034DA9E /* SerializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6C51E91D76E0084A2ED /* SerializationError.swift */; };
 		3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */; };
 		4AE6CDE934B89F083854D5D9 /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC154B762F6CA320EA0614C8 /* Pods_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +100,7 @@
 		38F653501EAC465E00E08FB6 /* CartService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
 		38F653541EAC4DAD00E08FB6 /* CatalogServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogServiceTests.swift; sourceTree = "<group>"; };
 		38F653561EAC4DBF00E08FB6 /* CartServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartServiceTests.swift; sourceTree = "<group>"; };
+		38F6535C1EB196FB00E08FB6 /* MockFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockFactory.swift; path = Mocks/MockFactory.swift; sourceTree = "<group>"; };
 		6484D6F75151074DAA9BDD96 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390F33BB35493E8571F6446 /* Pods-SmartFarmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFarmTests/Pods-SmartFarmTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -310,6 +316,7 @@
 				38CDE9611EA83C8A00ABAB28 /* Network */,
 				38CFE6DE1E91E9D00084A2ED /* SmartFarmTests-Bridging-Header.h */,
 				38CFE6DF1E91EA620084A2ED /* Helpers */,
+				38F653581EB195B300E08FB6 /* Mocks */,
 				38CFE6D11E91DCB40084A2ED /* Fixtures */,
 				38CFE6AF1E90566A0084A2ED /* Services */,
 				38CFE6AE1E9056630084A2ED /* ViewModels */,
@@ -318,6 +325,14 @@
 				38E7A6151E8B3DD40079DE1E /* Info.plist */,
 			);
 			path = SmartFarmTests;
+			sourceTree = "<group>";
+		};
+		38F653581EB195B300E08FB6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				38F6535C1EB196FB00E08FB6 /* MockFactory.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 		414BD0EE9C478A0B5BC3F9CB /* Pods */ = {
@@ -626,10 +641,15 @@
 				38F6534D1EAC445100E08FB6 /* NetworkManagerTests.swift in Sources */,
 				38CFE6CE1E91DBD50084A2ED /* StoreItemTests.swift in Sources */,
 				38CFE6E11E91EAB80084A2ED /* JSONReader.swift in Sources */,
+				38F7A7C71EB51B8C0034DA9E /* SerializationError.swift in Sources */,
 				38CFE6CC1E91DBBA0084A2ED /* CategoryTests.swift in Sources */,
+				38F7A7C41EB51B830034DA9E /* CartItem.swift in Sources */,
 				38F653571EAC4DBF00E08FB6 /* CartServiceTests.swift in Sources */,
+				38F7A7C51EB51B860034DA9E /* StoreItem.swift in Sources */,
 				38CDE9631EA83E2400ABAB28 /* BuilderRequestTests.swift in Sources */,
+				38F6535D1EB196FB00E08FB6 /* MockFactory.swift in Sources */,
 				38F653551EAC4DAD00E08FB6 /* CatalogServiceTests.swift in Sources */,
+				38F7A7C61EB51B890034DA9E /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
