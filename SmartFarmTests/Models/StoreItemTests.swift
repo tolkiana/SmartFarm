@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import SmartFarm
 
 class StoreItemTests: XCTestCase {
     
