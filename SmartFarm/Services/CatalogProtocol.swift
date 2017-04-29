@@ -12,6 +12,7 @@ protocol CatalogProtocol {
     
     typealias Code = String
     
+    func loadData(completion: () -> Void)
     func allCategories() -> [Category]?
     func allItems() -> [StoreItem]?
     func category(with: Code) -> Category?

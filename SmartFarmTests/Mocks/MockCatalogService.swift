@@ -10,6 +10,8 @@ import Foundation
 
 class MockCatalogService: CatalogProtocol {
     
+    func loadData(completion: () -> Void) {}
+    
     func allCategories() -> [Category]? {
          return MockFactory().mockCategories
     }

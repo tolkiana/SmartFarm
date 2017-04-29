@@ -17,11 +17,11 @@ class CatalogService: CatalogProtocol {
     private init() {}
     
     
-    func loadData(completion: @escaping (ResultType<Any>) -> Void) {
-        
-    }
-    
     // MARK: - Protocol Implementation
+    
+    func loadData(completion: () -> Void) {
+    
+    }
     
     func allCategories() -> [Category]? {
         return categories
