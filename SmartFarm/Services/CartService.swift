@@ -28,12 +28,17 @@ class CartService: CartProtocol {
     }
     
     func add(storeItem: StoreItem, quantity: Int) {
-        guard var cartItem = items.filter({$0.storeItem.code == storeItem.code}).first else {
+        guard quantity > 0 else {
+            return
+        }
+        guard let index = items.index(where: {$0.storeItem.code == storeItem.code}) else {
             let newItem = CartItem(storeItem: storeItem, quantity: quantity)
             items.append(newItem)
             return
         }
+        var cartItem = items[index]
         cartItem.quantity += quantity
+        items[index] = cartItem
     }
     
     func remove(cartItem: CartItem) {
@@ -44,22 +49,20 @@ class CartService: CartProtocol {
     }
     
     func increment(cartItem: CartItem) {
-        guard var cartItem = items.filter({$0.storeItem.code == cartItem.storeItem.code}).first else {
-            return
-        }
-        cartItem.quantity += 1
+        add(storeItem: cartItem.storeItem, quantity: 1)
     }
     
     func decrement(cartItem: CartItem) {
-        guard var cartItem = items.filter({$0.storeItem.code == cartItem.storeItem.code}).first else {
+        guard cartItem.quantity > 1 else {
+            remove(cartItem: cartItem)
             return
         }
-        if cartItem.quantity <= 1 {
-            remove(cartItem: cartItem)
+        guard let index = items.index(where: {$0.storeItem.code == cartItem.storeItem.code})  else {
+            return
         }
-        else {
-            cartItem.quantity -= 1
-        }
+        var cartItem = items[index]
+        cartItem.quantity -= 1
+        items[index] = cartItem
     }
     
     func clearItems() {
