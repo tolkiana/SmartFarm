@@ -56,6 +56,7 @@
 		38F7A7D41EB5349A0034DA9E /* CatalogProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7D01EB52C5A0034DA9E /* CatalogProtocol.swift */; };
 		38F7A7D51EB59A7D0034DA9E /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6535C1EB196FB00E08FB6 /* MockFactory.swift */; };
 		38F7A7D61EB59AB90034DA9E /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6E01E91EAB80084A2ED /* JSONReader.swift */; };
+		38F7A7D81EB64FBC0034DA9E /* CartProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7D71EB64FBC0034DA9E /* CartProtocol.swift */; };
 		3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */; };
 		4AE6CDE934B89F083854D5D9 /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC154B762F6CA320EA0614C8 /* Pods_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,7 @@
 		38F6535C1EB196FB00E08FB6 /* MockFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockFactory.swift; path = Mocks/MockFactory.swift; sourceTree = "<group>"; };
 		38F7A7D01EB52C5A0034DA9E /* CatalogProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogProtocol.swift; sourceTree = "<group>"; };
 		38F7A7D21EB5347F0034DA9E /* MockCatalogService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockCatalogService.swift; path = Mocks/MockCatalogService.swift; sourceTree = "<group>"; };
+		38F7A7D71EB64FBC0034DA9E /* CartProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartProtocol.swift; sourceTree = "<group>"; };
 		6484D6F75151074DAA9BDD96 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390F33BB35493E8571F6446 /* Pods-SmartFarmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFarmTests/Pods-SmartFarmTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				38F6534E1EAC465200E08FB6 /* CatalogService.swift */,
 				38F7A7D01EB52C5A0034DA9E /* CatalogProtocol.swift */,
 				38F653501EAC465E00E08FB6 /* CartService.swift */,
+				38F7A7D71EB64FBC0034DA9E /* CartProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				38F6534F1EAC465200E08FB6 /* CatalogService.swift in Sources */,
 				38F653511EAC465E00E08FB6 /* CartService.swift in Sources */,
 				38F7A7D11EB52C5A0034DA9E /* CatalogProtocol.swift in Sources */,
+				38F7A7D81EB64FBC0034DA9E /* CartProtocol.swift in Sources */,
 				3884FF1F1EA1494100AD1E20 /* NetworkManager.swift in Sources */,
 				38F6534B1EAC3EA000E08FB6 /* ResultType.swift in Sources */,
 				38F7A7D61EB59AB90034DA9E /* JSONReader.swift in Sources */,

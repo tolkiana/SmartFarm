@@ -8,23 +8,42 @@
 
 import Foundation
 
-struct CartService {
+class CartService: CartProtocol {
     
-    private var items: [CartItem]
+    private var items: [CartItem] = []
+    
+    // MARK: - Singleton
+    
+    static let shared = CartService()
+    private init() {}
+    
+    // MARK - Protocol Implementation
+
+    func cartItems() -> [CartItem] {
+        return items
+    }
     
     func totalItems() -> Int {
         return items.count
     }
     
-    func add(storeItem: StoreItem) {
+    func add(storeItem: StoreItem, quantity: Int) {
     
     }
     
-    func remove(storeItem: StoreItem) {
+    func remove(cartItem: CartItem) {
     
     }
     
-    func checkout() {
+    func increment(cartItem: CartItem) {
+    
+    }
+    
+    func decrement(cartItem: CartItem) {
+    
+    }
+    
+    func checkout(completion: () -> Void) {
     
     }
 }
