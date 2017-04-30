@@ -43,6 +43,10 @@ class CartService: CartProtocol {
     
     }
     
+    func clearItems() {
+    
+    }
+    
     func checkout(completion: () -> Void) {
     
     }

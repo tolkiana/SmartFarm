@@ -15,5 +15,6 @@ protocol CartProtocol {
     func remove(cartItem: CartItem)
     func increment(cartItem: CartItem)
     func decrement(cartItem: CartItem)
+    func clearItems()
     func checkout(completion: () -> Void)
 }
