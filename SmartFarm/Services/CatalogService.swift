@@ -21,6 +21,7 @@ class CatalogService: CatalogProtocol {
     
     func loadData(completion: () -> Void) {
         categories = MockFactory().mockCategories
+        completion()
     }
     
     func allCategories() -> [Category]? {
