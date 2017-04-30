@@ -16,9 +16,7 @@ protocol CatalogProtocol {
     func allCategories() -> [Category]?
     func allItems() -> [StoreItem]?
     func category(with: Code) -> Category?
-    func items(`for` category: Category) -> [StoreItem]?
     func item(with: Code) -> StoreItem?
-    func totalItems(`for` category: Category) -> Int
     func totalItems() -> Int
 }
 
@@ -32,16 +30,8 @@ extension CatalogProtocol {
         return nil
     }
     
-    func items(`for` category: Category) -> [StoreItem]? {
-        return nil
-    }
-    
     func item(with: Code) -> StoreItem? {
         return nil
-    }
-    
-    func totalItems(`for` category: Category) -> Int {
-        return category.items.count
     }
     
     func totalItems() -> Int {
