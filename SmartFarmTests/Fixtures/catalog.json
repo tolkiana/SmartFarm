@@ -7,37 +7,37 @@
                    "name": "cow",
                    "image": "🐮",
                    "price": 100.0,
-                   "numberAvailable": 8
+                   "numberAvailable": 4
                    }, {
                    "code": "002",
                    "name": "pig",
                    "image": "🐷",
                    "price": 50.0,
-                   "numberAvailable": 3
+                   "numberAvailable": 4
                    }, {
                    "code": "003",
                    "name": "goat",
                    "image": "🐐",
                    "price": 50.0,
-                   "numberAvailable": 0
+                   "numberAvailable": 2
                    }, {
                    "code": "004",
                    "name": "horse",
                    "image": "🐴",
                    "price": 12.0,
-                   "numberAvailable": 0
+                   "numberAvailable": 5
                    }, {
                    "code": "005",
                    "name": "chicken",
                    "image": "🐓",
                    "price": 10.0,
-                   "numberAvailable": 0
+                   "numberAvailable": 10
                    }, {
                    "code": "006",
                    "name": "turkey",
                    "image": "🦃",
                    "price": 20.0,
-                   "numberAvailable": 0
+                   "numberAvailable": 5
                    }]
          },
          {
