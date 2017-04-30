@@ -13,21 +13,21 @@ class CatalogServiceTests: XCTestCase {
     
     let mockService = MockCatalogService()
     
-    func testAllCategories() {
+    func test_getting_all_categories() {
         CatalogService.shared.loadData {}
         let categories = CatalogService.shared.allCategories()
         
         XCTAssertNotNil(categories)
     }
     
-    func testAllItems() {
+    func test_getting_all_items() {
         let items = mockService.allCategories()?.flatMap{ $0.items }
         let expectedItems = mockService.allItems()
         
         XCTAssert(expectedItems?.count == items?.count)
     }
     
-    func testCategoryWithCode() {
+    func test_get_category_with_code() {
         let rawCategory = JSONReader.array(fromJSONfile: "catalog").first!
         let items = rawCategory["items"] as! [[String: Any]]
         let category = mockService.category(with: "001")
@@ -38,7 +38,7 @@ class CatalogServiceTests: XCTestCase {
     }
     
     
-    func testItemWithCode() {
+    func test_get_item_with_code() {
         let animals = JSONReader.array(fromJSONfile: "catalog").first!["items"] as! [[String: Any]]
         let cow =  animals.first!
         let item = mockService.item(with: "001")
@@ -50,7 +50,7 @@ class CatalogServiceTests: XCTestCase {
         XCTAssert(item?.numberAvailable == cow["numberAvailable"] as? Int)
     }
     
-    func testTotalItems() {
+    func test_get_total_items() {
         let animals = JSONReader.array(fromJSONfile: "catalog").first!["items"] as! [[String: Any]]
         let vegetables = JSONReader.array(fromJSONfile: "catalog").last!["items"] as! [[String: Any]]
         let total = mockService.totalItems()
