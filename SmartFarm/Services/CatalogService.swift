@@ -20,7 +20,7 @@ class CatalogService: CatalogProtocol {
     // MARK: - Protocol Implementation
     
     func loadData(completion: () -> Void) {
-    
+        categories = MockFactory().mockCategories
     }
     
     func allCategories() -> [Category]? {

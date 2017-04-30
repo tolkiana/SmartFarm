@@ -15,26 +15,29 @@ protocol CatalogProtocol {
     func loadData(completion: () -> Void)
     func allCategories() -> [Category]?
     func allItems() -> [StoreItem]?
-    func category(with: Code) -> Category?
-    func item(with: Code) -> StoreItem?
+    func category(with code: Code) -> Category?
+    func item(with code: Code) -> StoreItem?
     func totalItems() -> Int
 }
 
 extension CatalogProtocol {
 
     func allItems() -> [StoreItem]? {
-        return nil
+        return allCategories()?.flatMap{ $0.items }
     }
     
-    func category(with: Code) -> Category? {
-        return nil
+    func category(with code: Code) -> Category? {
+        return allCategories()?.filter { $0.code == code }.first
     }
     
-    func item(with: Code) -> StoreItem? {
-        return nil
+    func item(with code: Code) -> StoreItem? {
+        return allItems()?.filter { $0.code == code }.first
     }
     
     func totalItems() -> Int {
-        return 0
+        guard let items = allItems() else {
+            return 0
+        }
+        return items.count
     }
 }

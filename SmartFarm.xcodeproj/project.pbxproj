@@ -54,6 +54,8 @@
 		38F7A7D11EB52C5A0034DA9E /* CatalogProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7D01EB52C5A0034DA9E /* CatalogProtocol.swift */; };
 		38F7A7D31EB5347F0034DA9E /* MockCatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7D21EB5347F0034DA9E /* MockCatalogService.swift */; };
 		38F7A7D41EB5349A0034DA9E /* CatalogProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7D01EB52C5A0034DA9E /* CatalogProtocol.swift */; };
+		38F7A7D51EB59A7D0034DA9E /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6535C1EB196FB00E08FB6 /* MockFactory.swift */; };
+		38F7A7D61EB59AB90034DA9E /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6E01E91EAB80084A2ED /* JSONReader.swift */; };
 		3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */; };
 		4AE6CDE934B89F083854D5D9 /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC154B762F6CA320EA0614C8 /* Pods_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -641,12 +643,14 @@
 				38F7A7D11EB52C5A0034DA9E /* CatalogProtocol.swift in Sources */,
 				3884FF1F1EA1494100AD1E20 /* NetworkManager.swift in Sources */,
 				38F6534B1EAC3EA000E08FB6 /* ResultType.swift in Sources */,
+				38F7A7D61EB59AB90034DA9E /* JSONReader.swift in Sources */,
 				38CFE6C61E91D76E0084A2ED /* SerializationError.swift in Sources */,
 				38CDE95E1EA2F1E600ABAB28 /* HTTPMethod.swift in Sources */,
 				38CFE6B51E9059C70084A2ED /* CartItem.swift in Sources */,
 				38E7A5FF1E8B3DD40079DE1E /* AppDelegate.swift in Sources */,
 				38BF489B1EA970E400C54F3D /* NetworkError.swift in Sources */,
 				38CDE95C1EA2F18900ABAB28 /* RequestBuilder.swift in Sources */,
+				38F7A7D51EB59A7D0034DA9E /* MockFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
