@@ -21,7 +21,7 @@ class CatalogServiceTests: XCTestCase {
     }
     
     func testAllItems() {
-        let items = mockService.allCategories()?.map{ $0.items }
+        let items = mockService.allCategories()?.flatMap{ $0.items }
         let expectedItems = mockService.allItems()
         
         XCTAssert(expectedItems?.count == items?.count)
