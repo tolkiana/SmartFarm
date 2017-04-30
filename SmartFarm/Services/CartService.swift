@@ -24,27 +24,46 @@ class CartService: CartProtocol {
     }
     
     func totalItems() -> Int {
-        return items.count
+        return items.map { $0.quantity }.reduce(0, +)
     }
     
     func add(storeItem: StoreItem, quantity: Int) {
-    
+        guard var cartItem = items.filter({$0.storeItem.code == storeItem.code}).first else {
+            let newItem = CartItem(storeItem: storeItem, quantity: quantity)
+            items.append(newItem)
+            return
+        }
+        cartItem.quantity += quantity
     }
     
     func remove(cartItem: CartItem) {
-    
+        guard let index = items.index(where: {$0.storeItem.code == cartItem.storeItem.code}) else {
+            return
+        }
+        items.remove(at: index)
     }
     
     func increment(cartItem: CartItem) {
-    
+        guard var cartItem = items.filter({$0.storeItem.code == cartItem.storeItem.code}).first else {
+            return
+        }
+        cartItem.quantity += 1
     }
     
     func decrement(cartItem: CartItem) {
-    
+        guard var cartItem = items.filter({$0.storeItem.code == cartItem.storeItem.code}).first else {
+            return
+        }
+        if cartItem.quantity <= 1 {
+            remove(cartItem: cartItem)
+        }
+        else {
+            cartItem.quantity -= 1
+        }
     }
     
     func clearItems() {
-    
+        items.removeAll()
     }
     
     func checkout(completion: () -> Void) {
