@@ -11,7 +11,11 @@ import XCTest
 
 class CatalogServiceTests: XCTestCase {
     
-    let mockService = MockCatalogService()
+    var mockService: MockCatalogService!
+    
+    override func setUp() {
+        mockService = MockCatalogService()
+    }
     
     func test_getting_all_categories() {
         CatalogService.shared.loadData {}
@@ -48,6 +52,58 @@ class CatalogServiceTests: XCTestCase {
         XCTAssert(item?.icon == cow["image"] as? String)
         XCTAssert(item?.price == cow["price"] as? Float)
         XCTAssert(item?.numberAvailable == cow["numberAvailable"] as? Int)
+    }
+    
+    func test_decrement_item() {
+        var item = mockService.item(with: "001")!
+        let currentQuantity = item.numberAvailable
+        mockService.decrement(item: item, quantity: 1)
+        item = mockService.item(with: "001")!
+        
+        XCTAssert(item.numberAvailable == currentQuantity - 1)
+    }
+    
+    func test_decrement_zero_items() {
+        var item = mockService.item(with: "001")!
+        let currentQuantity = item.numberAvailable
+        mockService.decrement(item: item, quantity: 0)
+        item = mockService.item(with: "001")!
+        
+        XCTAssert(item.numberAvailable == currentQuantity)
+    }
+    
+    func test_decrement_current_available_items() {
+        var item = mockService.item(with: "001")!
+        mockService.decrement(item: item, quantity: 4)
+        item = mockService.item(with: "001")!
+        
+        XCTAssert(item.numberAvailable == 0)
+    }
+    
+    func test_decrement_more_than_current_available_items() {
+        var item = mockService.item(with: "001")!
+        mockService.decrement(item: item, quantity: 5)
+        item = mockService.item(with: "001")!
+        
+        XCTAssert(item.numberAvailable == 0)
+    }
+    
+    func test_increment_item() {
+        var item = mockService.item(with: "002")!
+        let currentQuantity = item.numberAvailable
+        mockService.increment(item: item, quantity: 1)
+        item = mockService.item(with: "002")!
+        
+        XCTAssert(item.numberAvailable == currentQuantity + 1)
+    }
+    
+    func test_increment_zero_items() {
+        var item = mockService.item(with: "002")!
+        let currentQuantity = item.numberAvailable
+        mockService.increment(item: item, quantity: 0)
+        item = mockService.item(with: "002")!
+        
+        XCTAssert(item.numberAvailable == currentQuantity)
     }
     
     func test_get_total_items() {
