@@ -39,6 +39,8 @@ class CartService: CartProtocol {
         var cartItem = items[index]
         cartItem.quantity += quantity
         items[index] = cartItem
+        
+        CatalogService.shared.decrement(item: storeItem, quantity: quantity)
     }
     
     func remove(cartItem: CartItem) {
@@ -46,6 +48,8 @@ class CartService: CartProtocol {
             return
         }
         items.remove(at: index)
+        
+        CatalogService.shared.increment(item: cartItem.storeItem, quantity: cartItem.quantity)
     }
     
     func increment(cartItem: CartItem) {
@@ -63,6 +67,8 @@ class CartService: CartProtocol {
         var cartItem = items[index]
         cartItem.quantity -= 1
         items[index] = cartItem
+        
+        CatalogService.shared.increment(item: cartItem.storeItem, quantity: 1)
     }
     
     func clearItems() {
