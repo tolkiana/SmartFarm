@@ -48,6 +48,6 @@ extension CatalogProtocol {
         guard let items = allItems() else {
             return 0
         }
-        return items.count
+        return items.map{$0.numberAvailable}.reduce(0, +)
     }
 }

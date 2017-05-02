@@ -107,10 +107,8 @@ class CatalogServiceTests: XCTestCase {
     }
     
     func test_get_total_items() {
-        let animals = JSONReader.array(fromJSONfile: "catalog").first!["items"] as! [[String: Any]]
-        let vegetables = JSONReader.array(fromJSONfile: "catalog").last!["items"] as! [[String: Any]]
         let total = mockService.totalItems()
         
-        XCTAssert(total == animals.count + vegetables.count)
+        XCTAssert(total == 45)
     }
 }
