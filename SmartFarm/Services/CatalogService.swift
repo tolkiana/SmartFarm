@@ -43,10 +43,48 @@ class CatalogService: CatalogProtocol {
     
     func decrement(item: StoreItem, quantity: Int) {
         precondition(quantity <= item.numberAvailable)
+        
+        guard quantity > 0 else {
+            return
+        }
+        guard var modifiedCategory = category(with: item.categoryCode) else {
+            return
+        }
+        guard let categoryIndex = categories?.index(where: {$0.code == item.categoryCode}) else {
+            return
+        }
+        guard let itemIndex = modifiedCategory.items.index(where: {$0.code == item.code}) else {
+            return
+        }
+        guard quantity != item.numberAvailable else {
+            categories?.remove(at: itemIndex)
+            return
+        }
+        
+        var modifiedItem = item
+        modifiedItem.numberAvailable = modifiedItem.numberAvailable - quantity
+        modifiedCategory.items[itemIndex] = modifiedItem
+        categories?[categoryIndex] = modifiedCategory
     }
     
     func increment(item: StoreItem, quantity: Int) {
+        guard quantity > 0 else {
+            return
+        }
+        guard var modifiedCategory = category(with: item.categoryCode) else {
+            return
+        }
+        guard let categoryIndex = categories?.index(where: {$0.code == item.categoryCode}) else {
+            return
+        }
+        guard let itemIndex = modifiedCategory.items.index(where: {$0.code == item.code}) else {
+            return
+        }
         
+        var modifiedItem = item
+        modifiedItem.numberAvailable = modifiedItem.numberAvailable + quantity
+        modifiedCategory.items[itemIndex] = modifiedItem
+        categories?[categoryIndex] = modifiedCategory
     }
     
     func totalItems(inCategory category: Category) -> Int {
