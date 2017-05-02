@@ -1,48 +1,49 @@
-| | |
-| | |
-
 !contents -R2 -g -p -f -h
 !5 Smart Farm is an app in which you can purchased animals from a Farm, the app has two basic components:
+
 !6 ''Catalog'': Contains the available items.
+
 !6 ''Cart'': Contains purchased items.
+
 !4 Tests Preconditions
+
 For the series of this test we have the following conditions:
 
 1. Catalog initially has 30 animals distributed according the following table and with the described prices per unit.
 
-| Catalog Fixture |
-| animal | price | quantity |
-| cow | 100.0 | 4 |
-| horse | 120.0 | 5 |
-| pig | 50.0 | 4 |
-| chicken | 10.0 | 10 |
-| turkey | 20.0 | 5 |
-| goat | 50.0 | 2 |
+|Catalog Fixture       |
+|animal |price|quantity|
+|cow    |100.0|4       |
+|horse  |120.0|5       |
+|pig    |50.0 |4       |
+|chicken|10.0 |10      |
+|turkey |20.0 |5       |
+|goat   |50.0 |2       |
 
-3. The Cart initially is empty.
+2. The Cart initially is empty.
 
 !4 Test 1: Add an animal to the Cart
-| Add Animal Fixture |
-| product | quantity | products In Catalog? | products In Cart? | cart Total Amount? |
-| cow | 2 | 28 | 2 | 200.0 |
-| goat | 1 | 27 | 3 | 250.0 |
+|Add Animal Fixture                                                        |
+|product|quantity|products In Catalog?|products In Cart?|cart Total Amount?|
+|cow    |2       |28                  |2                |200.0             |
+|goat   |1       |27                  |3                |250.0             |
 
 !4 Test 2: Add last product of certain type to the Cart
-| Add Goat Fixture |
-| product | quantity | products In Catalog? | products In Cart? | goats In Catalog? | cart Total Amount? |
-| goat | 1 | 26 | 4 | 0 | 300.0 |
+|Add Goat Fixture                                                                            |
+|product|quantity|products In Catalog?|products In Cart?|goats In Catalog?|cart Total Amount?|
+|goat   |1       |26                  |4                |0                |300.0             |
 
 !4 Test 3: Remove a product from the Cart
-| Remove Animal Fixture |
-| product | quantity | products In Catalog? | products In Cart? | goats In Catalog? | cart Total Amount? |
-| goat | 2 | 28 | 2 | 2 | 200.0 |
+|Remove Animal Fixture                                                                       |
+|product|quantity|products In Catalog?|products In Cart?|goats In Catalog?|cart Total Amount?|
+|goat   |2       |28                  |2                |2                |200.0             |
 
 !4 Test 4: Checkout failure
-| Checkout Fixture |
-| success | products In Catalog? | products In Cart? | cart Total Amount? |
-| false | 28 | 2 | 200.0 |
+|Checkout Fixture                                                 |
+|success|products In Catalog?|products In Cart?|cart Total Amount?|
+|false  |28                  |2                |200.0             |
 
 !4 Test 5: Checkout success
-| Checkout Fixture |
-| success | products In Catalog? | products In Cart? | cart Total Amount? |
-| true | 28 | 0 | 0.0 |
+|Checkout Fixture                                                 |
+|success|products In Catalog?|products In Cart?|cart Total Amount?|
+|true   |28                  |0                |0.0               |
