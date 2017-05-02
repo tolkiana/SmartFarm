@@ -16,14 +16,14 @@ For the series of this test we have the following conditions:
 
 2. This is the price for each animal:
 
-|Comment      |
-|animal |price|
-|cow    |100.0|
-|horse  |120.0|
-|pig    |50.0 |
-|chicken|10.0 |
-|turkey |20.0 |
-|goat   |50.0 |
+|Catalog Fixture|
+|animal  |price |
+|cow     |100.0 |
+|horse   |120.0 |
+|pig     |50.0  |
+|chicken |10.0  |
+|turkey  |20.0  |
+|goat    |50.0  |
 
 3. The Cart initially is empty.
 
@@ -49,6 +49,6 @@ For the series of this test we have the following conditions:
 |false  |28                  |2                |200.0             |
 
 !4 Test 5: Checkout success
-|Checkout Fixture                                                  |
+|Checkout Fixture                                                 |
 |success|products In Catalog?|products In Cart?|cart Total Amount?|
-|true   |28                  |0                |0.0                   |
+|true   |28                  |0                |0.0               |
