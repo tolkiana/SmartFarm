@@ -85,6 +85,18 @@ class CatalogServiceTests: XCTestCase {
         XCTAssert(item.numberAvailable == currentQuantity + 1)
     }
     
+    func test_increment_item_not_in_catalog() {
+        var item = CatalogService.shared.item(with: "001")
+        CatalogService.shared.decrement(item: item!, quantity: 4)
+        
+        let newItem = MockFactory().mockItem
+        CatalogService.shared.increment(item: newItem, quantity: 1)
+        item = CatalogService.shared.item(with: "001")
+        
+        XCTAssertNotNil(item)
+        XCTAssert(item?.numberAvailable == 1)
+    }
+    
     func test_increment_zero_items() {
         var item = CatalogService.shared.item(with: "002")!
         let currentQuantity = item.numberAvailable

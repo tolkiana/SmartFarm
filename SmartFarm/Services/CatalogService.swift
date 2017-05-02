@@ -79,6 +79,10 @@ class CatalogService: CatalogProtocol {
             return
         }
         guard let itemIndex = modifiedCategory.items.index(where: {$0.code == item.code}) else {
+            var modifiedItem = item
+            modifiedItem.numberAvailable = quantity
+            modifiedCategory.items.append(modifiedItem)
+            categories?[categoryIndex] = modifiedCategory
             return
         }
         
