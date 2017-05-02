@@ -57,7 +57,8 @@ class CatalogService: CatalogProtocol {
             return
         }
         guard quantity != item.numberAvailable else {
-            categories?.remove(at: itemIndex)
+            modifiedCategory.items.remove(at: itemIndex)
+            categories?[categoryIndex] = modifiedCategory
             return
         }
         
