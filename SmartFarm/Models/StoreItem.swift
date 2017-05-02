@@ -13,6 +13,7 @@ struct StoreItem {
     var name: String
     var icon: String
     var price: Float
+    var categoryCode: String
     var numberAvailable: Int
 }
 
@@ -23,6 +24,7 @@ extension StoreItem {
             let rawName = json["name"],
             let rawImage = json["image"],
             let rawPrice = json["price"],
+            let rawCategory = json["categoryCode"],
             let rawNumberAvailable = json["numberAvailable"] else {
             throw SerializationError.missing
         }
@@ -31,6 +33,7 @@ extension StoreItem {
             let name = rawName as? String,
             let icon = rawImage as? String,
             let price = rawPrice as? Float,
+            let categoryCode = rawCategory as? String,
             let numberAvailable = rawNumberAvailable as? Int else {
             throw SerializationError.invalid
         }
@@ -38,6 +41,7 @@ extension StoreItem {
         self.name = name
         self.icon = icon
         self.price = price
+        self.categoryCode = categoryCode
         self.numberAvailable = numberAvailable
     }
 }

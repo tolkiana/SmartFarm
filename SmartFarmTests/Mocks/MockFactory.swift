@@ -19,7 +19,7 @@ struct MockFactory {
                 categories.append(category)
             }
             catch {
-                let item = StoreItem(code: "5673", name: "itemMock", icon: "🎷", price: 102.20, numberAvailable: 5)
+                let item = StoreItem(code: "5673", name: "itemMock", icon: "🎷", price: 102.20, categoryCode: "som123", numberAvailable: 5)
                 let category = Category(code: "som123", name: "mock", items: [item])
                 categories.append(category)
             }
@@ -29,7 +29,7 @@ struct MockFactory {
     
     var mockCategory: Category {
         guard let category = mockCategories.first else {
-            let item = StoreItem(code: "9587", name: "itemMock", icon: "🌶", price: 0.5, numberAvailable: 2)
+            let item = StoreItem(code: "9587", name: "itemMock", icon: "🌶", price: 0.5, categoryCode: "chillis", numberAvailable: 2)
             return Category(code: "chillis", name: "mock", items: [item])
         }
         return category
@@ -41,7 +41,7 @@ struct MockFactory {
     
     var mockItem: StoreItem {
         guard let item = mockItems.first else {
-            return StoreItem(code: "4321", name: "itemMock", icon: "🍷", price: 10.0, numberAvailable: 12)
+            return StoreItem(code: "4321", name: "itemMock", icon: "🍷", price: 10.0, categoryCode: "som123", numberAvailable: 12)
         }
         return item
     }

@@ -7,6 +7,7 @@
                 "numberAvailable": 8
                 }, {
                 "code": "002",
+                "categoryCode": "001",
                 "name": "pig",
                 "image": "🐷",
                 "price": 50.0,

@@ -9,12 +9,14 @@
       "name": "vegetables",
       "items": [{
                 "code": 123,
+                "categoryCode": "123",
                 "name": true,
                 "image": "",
                 "price": "10.0",
                 "numberAvailable": 5
                 }, {
                 "code": "003",
+                "categoryCode": false,
                 "name": "tomato",
                 "image": "🍎",
                 "price": 5.0,
