@@ -72,20 +72,11 @@ class CatalogServiceTests: XCTestCase {
         XCTAssert(item.numberAvailable == currentQuantity)
     }
     
-    func test_decrement_current_available_items() {
-        var item = mockService.item(with: "001")!
+    func test_decrement_all_current_available_items() {
+        let item = mockService.item(with: "001")!
         mockService.decrement(item: item, quantity: 4)
-        item = mockService.item(with: "001")!
         
-        XCTAssert(item.numberAvailable == 0)
-    }
-    
-    func test_decrement_more_than_current_available_items() {
-        var item = mockService.item(with: "001")!
-        mockService.decrement(item: item, quantity: 5)
-        item = mockService.item(with: "001")!
-        
-        XCTAssert(item.numberAvailable == 0)
+        XCTAssertNil(mockService.item(with: "001"))
     }
     
     func test_increment_item() {
