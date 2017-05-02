@@ -106,6 +106,20 @@ class CatalogServiceTests: XCTestCase {
         XCTAssert(item.numberAvailable == currentQuantity)
     }
     
+    func test_get_total_items_in_animals_category() {
+        let category = mockService.category(with: "001")!
+        let total = mockService.totalItems(inCategory: category)
+        
+        XCTAssert(total == 30)
+    }
+    
+    func test_get_total_items_in_vegetables_category() {
+        let category = mockService.category(with: "002")!
+        let total = mockService.totalItems(inCategory: category)
+        
+        XCTAssert(total == 15)
+    }
+    
     func test_get_total_items() {
         let total = mockService.totalItems()
         

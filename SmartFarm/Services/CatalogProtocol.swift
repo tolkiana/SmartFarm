@@ -19,6 +19,7 @@ protocol CatalogProtocol {
     func item(with code: Code) -> StoreItem?
     func decrement(item: StoreItem, quantity: Int)
     func increment(item: StoreItem, quantity: Int)
+    func totalItems(inCategory category: Category) -> Int
     func totalItems() -> Int
 }
 
@@ -44,6 +45,10 @@ extension CatalogProtocol {
         
     }
     
+    func totalItems(inCategory category: Category) -> Int {
+        return category.items.map{$0.numberAvailable}.reduce(0, +)
+    }
+
     func totalItems() -> Int {
         guard let items = allItems() else {
             return 0
