@@ -11,22 +11,19 @@ import XCTest
 
 class CatalogServiceTests: XCTestCase {
     
-    var mockService: MockCatalogService!
-    
     override func setUp() {
-        mockService = MockCatalogService()
+        CatalogService.shared.loadData {}
     }
     
     func test_getting_all_categories() {
-        CatalogService.shared.loadData {}
         let categories = CatalogService.shared.allCategories()
         
         XCTAssertNotNil(categories)
     }
     
     func test_getting_all_items() {
-        let items = mockService.allCategories()?.flatMap{ $0.items }
-        let expectedItems = mockService.allItems()
+        let items = CatalogService.shared.allCategories()?.flatMap{ $0.items }
+        let expectedItems = CatalogService.shared.allItems()
         
         XCTAssert(expectedItems?.count == items?.count)
     }
@@ -34,7 +31,7 @@ class CatalogServiceTests: XCTestCase {
     func test_get_category_with_code() {
         let rawCategory = JSONReader.array(fromJSONfile: "catalog").first!
         let items = rawCategory["items"] as! [[String: Any]]
-        let category = mockService.category(with: "001")
+        let category = CatalogService.shared.category(with: "001")
         
         XCTAssert(category?.code == rawCategory["code"] as? String)
         XCTAssert(category?.name == rawCategory["name"] as? String)
@@ -45,7 +42,7 @@ class CatalogServiceTests: XCTestCase {
     func test_get_item_with_code() {
         let animals = JSONReader.array(fromJSONfile: "catalog").first!["items"] as! [[String: Any]]
         let cow =  animals.first!
-        let item = mockService.item(with: "001")
+        let item = CatalogService.shared.item(with: "001")
         
         XCTAssert(item?.code == cow["code"] as? String)
         XCTAssert(item?.name == cow["name"] as? String)
@@ -55,64 +52,64 @@ class CatalogServiceTests: XCTestCase {
     }
     
     func test_decrement_item() {
-        var item = mockService.item(with: "001")!
+        var item = CatalogService.shared.item(with: "001")!
         let currentQuantity = item.numberAvailable
-        mockService.decrement(item: item, quantity: 1)
-        item = mockService.item(with: "001")!
+        CatalogService.shared.decrement(item: item, quantity: 1)
+        item = CatalogService.shared.item(with: "001")!
         
         XCTAssert(item.numberAvailable == currentQuantity - 1)
     }
     
     func test_decrement_zero_items() {
-        var item = mockService.item(with: "001")!
+        var item = CatalogService.shared.item(with: "001")!
         let currentQuantity = item.numberAvailable
-        mockService.decrement(item: item, quantity: 0)
-        item = mockService.item(with: "001")!
+        CatalogService.shared.decrement(item: item, quantity: 0)
+        item = CatalogService.shared.item(with: "001")!
         
         XCTAssert(item.numberAvailable == currentQuantity)
     }
     
     func test_decrement_all_current_available_items() {
-        let item = mockService.item(with: "001")!
-        mockService.decrement(item: item, quantity: 4)
+        let item = CatalogService.shared.item(with: "001")!
+        CatalogService.shared.decrement(item: item, quantity: 4)
         
-        XCTAssertNil(mockService.item(with: "001"))
+        XCTAssertNil(CatalogService.shared.item(with: "001"))
     }
     
     func test_increment_item() {
-        var item = mockService.item(with: "002")!
+        var item = CatalogService.shared.item(with: "002")!
         let currentQuantity = item.numberAvailable
-        mockService.increment(item: item, quantity: 1)
-        item = mockService.item(with: "002")!
+        CatalogService.shared.increment(item: item, quantity: 1)
+        item = CatalogService.shared.item(with: "002")!
         
         XCTAssert(item.numberAvailable == currentQuantity + 1)
     }
     
     func test_increment_zero_items() {
-        var item = mockService.item(with: "002")!
+        var item = CatalogService.shared.item(with: "002")!
         let currentQuantity = item.numberAvailable
-        mockService.increment(item: item, quantity: 0)
-        item = mockService.item(with: "002")!
+        CatalogService.shared.increment(item: item, quantity: 0)
+        item = CatalogService.shared.item(with: "002")!
         
         XCTAssert(item.numberAvailable == currentQuantity)
     }
     
     func test_get_total_items_in_animals_category() {
-        let category = mockService.category(with: "001")!
-        let total = mockService.totalItems(inCategory: category)
+        let category = CatalogService.shared.category(with: "001")!
+        let total = CatalogService.shared.totalItems(inCategory: category)
         
         XCTAssert(total == 30)
     }
     
     func test_get_total_items_in_vegetables_category() {
-        let category = mockService.category(with: "002")!
-        let total = mockService.totalItems(inCategory: category)
+        let category = CatalogService.shared.category(with: "002")!
+        let total = CatalogService.shared.totalItems(inCategory: category)
         
         XCTAssert(total == 15)
     }
     
     func test_get_total_items() {
-        let total = mockService.totalItems()
+        let total = CatalogService.shared.totalItems()
         
         XCTAssert(total == 45)
     }
