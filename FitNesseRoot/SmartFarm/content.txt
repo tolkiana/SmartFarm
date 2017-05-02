@@ -11,14 +11,14 @@ For the series of this test we have the following conditions:
 
 1. Catalog initially has 30 animals distributed according the following table and with the described prices per unit.
 
-|Catalog Fixture       |
-|animal |price|quantity|
-|cow    |100.0|4       |
-|horse  |120.0|5       |
-|pig    |50.0 |4       |
-|chicken|10.0 |10      |
-|turkey |20.0 |5       |
-|goat   |50.0 |2       |
+|Catalog Fixture         |
+|animal |price?|quantity?|
+|cow    |100.0 |4        |
+|horse  |120.0 |5        |
+|pig    |50.0  |4        |
+|chicken|10.0  |10       |
+|turkey |20.0  |5        |
+|goat   |50.0  |2        |
 
 2. The Cart initially is empty.
 
