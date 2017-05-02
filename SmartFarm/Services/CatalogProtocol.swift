@@ -17,6 +17,8 @@ protocol CatalogProtocol {
     func allItems() -> [StoreItem]?
     func category(with code: Code) -> Category?
     func item(with code: Code) -> StoreItem?
+    func decrement(item: StoreItem, quantity: Int)
+    func increment(item: StoreItem, quantity: Int)
     func totalItems() -> Int
 }
 
@@ -32,6 +34,14 @@ extension CatalogProtocol {
     
     func item(with code: Code) -> StoreItem? {
         return allItems()?.filter { $0.code == code }.first
+    }
+    
+    func decrement(item: StoreItem, quantity: Int) {
+        precondition(quantity <= item.numberAvailable)
+    }
+    
+    func increment(item: StoreItem, quantity: Int) {
+        
     }
     
     func totalItems() -> Int {
