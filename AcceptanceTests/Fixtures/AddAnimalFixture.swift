@@ -19,9 +19,12 @@ class AddAnimalFixture: NSObject {
     func productsInCatalog() -> String {
         let code = ItemMapper.code(forItem: product)
         guard let item = catalog.item(with: code) else {
-            return "0"
+            return ""
         }
-        cart.add(storeItem: item, quantity: Int(quantity)!)
+        guard let qty = Int(quantity) else {
+            return ""
+        }
+        cart.add(storeItem: item, quantity: qty)
         let total = catalog.totalItems(forCategoryCode: item.categoryCode)
         
         return "\(total)"
