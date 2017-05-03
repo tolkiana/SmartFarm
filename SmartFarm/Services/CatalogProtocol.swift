@@ -19,5 +19,6 @@ protocol CatalogProtocol {
     func decrement(item: StoreItem, quantity: Int)
     func increment(item: StoreItem, quantity: Int)
     func totalItems(inCategory category: Category) -> Int
+    func totalItems(forCategoryCode code: Code) -> Int
     func totalItems() -> Int
 }
