@@ -11,13 +11,25 @@ import Foundation
 @objc(CatalogFixture)
 class CatalogFixture: NSObject {
     var animal = ""
+    let catalog = CatalogService.shared
+    
     
     func price() -> String {
-        return ""
+        catalog.loadData {}
+        let code = ItemMapper.code(forItem: animal)
+        guard let item = catalog.item(with: code) else {
+            return ""
+        }
+        return "\(item.price)"
     }
     
     func quantity() -> String {
-        return ""
+        catalog.loadData {}
+        let code = ItemMapper.code(forItem: animal)
+        guard let item = catalog.item(with: code) else {
+            return ""
+        }
+        return "\(item.numberAvailable)"
     }
     
 }
