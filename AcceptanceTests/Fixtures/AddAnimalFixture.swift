@@ -10,18 +10,28 @@ import Foundation
 
 @objc(AddAnimalFixture)
 class AddAnimalFixture: NSObject {
+    let catalog = CatalogService.shared
+    let cart = CartService.shared
+    
     var product = ""
-    var quantity = 0
+    var quantity = ""
     
     func productsInCatalog() -> String {
-        return "0"
+        let code = ItemMapper.code(forItem: product)
+        guard let item = catalog.item(with: code) else {
+            return "0"
+        }
+        cart.add(storeItem: item, quantity: Int(quantity)!)
+        let total = catalog.totalItems(forCategoryCode: item.categoryCode)
+        
+        return "\(total)"
     }
     
     func productsInCart() -> String {
-        return "0"
+        return "\(cart.totalItems())"
     }
     
     func cartTotalAmount() -> String {
-        return "0.0"
+        return "\(cart.totalAmount())"
     }
 }
