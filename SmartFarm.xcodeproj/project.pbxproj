@@ -74,6 +74,7 @@
 		38F7A7EC1EB83B530034DA9E /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6E01E91EAB80084A2ED /* JSONReader.swift */; };
 		38F7A7EE1EB944BD0034DA9E /* CatalogFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7ED1EB944BD0034DA9E /* CatalogFixture.swift */; };
 		38F7A7F11EB952DD0034DA9E /* ItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F01EB952DD0034DA9E /* ItemMapper.swift */; };
+		38F7A7F21EB95C850034DA9E /* catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 38CFE6D21E91DCF80084A2ED /* catalog.json */; };
 		3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */; };
 		4AE6CDE934B89F083854D5D9 /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC154B762F6CA320EA0614C8 /* Pods_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -516,6 +517,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F7A7F21EB95C850034DA9E /* catalog.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
