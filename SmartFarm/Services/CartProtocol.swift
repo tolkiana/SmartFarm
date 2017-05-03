@@ -11,6 +11,7 @@ import Foundation
 protocol CartProtocol {
     func cartItems() -> [CartItem]
     func totalItems() -> Int
+    func totalAmount() -> Float
     func add(storeItem: StoreItem, quantity: Int)
     func remove(cartItem: CartItem)
     func increment(cartItem: CartItem)

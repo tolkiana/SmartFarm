@@ -24,7 +24,15 @@ class CartService: CartProtocol {
     }
     
     func totalItems() -> Int {
-        return items.map { $0.quantity }.reduce(0, +)
+        return items
+            .map{ $0.quantity }
+            .reduce(0, +)
+    }
+    
+    func totalAmount() -> Float {
+        return items
+            .map{ Float($0.quantity) * $0.storeItem.price }
+            .reduce(0, +)
     }
     
     func add(storeItem: StoreItem, quantity: Int) {

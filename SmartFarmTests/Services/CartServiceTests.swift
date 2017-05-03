@@ -31,6 +31,13 @@ class CartServiceTests: XCTestCase {
         XCTAssert(cart.totalItems() == 3)
     }
     
+    func test_getting_total_amount() {
+        let mockStoreItem = MockFactory().mockItem
+        cart.add(storeItem: mockStoreItem, quantity: 3)
+        
+        XCTAssert(cart.totalAmount() == 300.0)
+    }
+    
     func test_add_new_store_item() {
         let mockStoreItem = MockFactory().mockItem
         cart.add(storeItem: mockStoreItem, quantity: 2)
