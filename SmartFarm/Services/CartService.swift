@@ -42,6 +42,8 @@ class CartService: CartProtocol {
         guard let index = items.index(where: {$0.storeItem.code == storeItem.code}) else {
             let newItem = CartItem(storeItem: storeItem, quantity: quantity)
             items.append(newItem)
+            
+            CatalogService.shared.decrement(item: storeItem, quantity: quantity)
             return
         }
         var cartItem = items[index]

@@ -11,6 +11,11 @@ import XCTest
 class CartServiceTests: XCTestCase {
     
     let cart = CartService.shared
+    let catalog = CatalogService.shared
+    
+    override func setUp() {
+        catalog.loadData {}
+    }
     
     override func tearDown() {
         cart.clearItems()
@@ -42,6 +47,7 @@ class CartServiceTests: XCTestCase {
         let mockStoreItem = MockFactory().mockItem
         cart.add(storeItem: mockStoreItem, quantity: 2)
         
+        XCTAssert(catalog.totalItems() == 43)
         XCTAssert(cart.totalItems() == 2)
         XCTAssert(cart.cartItems().count == 1)
         XCTAssert(cart.cartItems().first?.storeItem.code == mockStoreItem.code)
@@ -52,6 +58,7 @@ class CartServiceTests: XCTestCase {
         cart.add(storeItem: mockStoreItem, quantity: 2)
         cart.add(storeItem: mockStoreItem, quantity: 1)
         
+        XCTAssert(catalog.totalItems() == 42)
         XCTAssert(cart.totalItems() == 3)
         XCTAssert(cart.cartItems().count == 1)
         XCTAssert(cart.cartItems().first?.storeItem.code == mockStoreItem.code)
@@ -61,6 +68,7 @@ class CartServiceTests: XCTestCase {
         let mockStoreItem = MockFactory().mockItem
         cart.add(storeItem: mockStoreItem, quantity: 0)
         
+        XCTAssert(catalog.totalItems() == 45)
         XCTAssert(cart.totalItems() == 0)
         XCTAssert(cart.cartItems().count == 0)
     }
@@ -70,6 +78,7 @@ class CartServiceTests: XCTestCase {
         cart.add(storeItem: mockStoreItem, quantity: 2)
         cart.add(storeItem: mockStoreItem, quantity: 0)
         
+        XCTAssert(catalog.totalItems() == 43)
         XCTAssert(cart.totalItems() == 2)
         XCTAssert(cart.cartItems().count == 1)
     }
@@ -80,6 +89,7 @@ class CartServiceTests: XCTestCase {
         let cartItem = cart.cartItems().first!
         cart.remove(cartItem: cartItem)
         
+        XCTAssert(catalog.totalItems() == 45)
         XCTAssert(cart.totalItems() == 0)
         XCTAssert(cart.cartItems().count == 0)
     }
@@ -90,6 +100,7 @@ class CartServiceTests: XCTestCase {
         let cartItem = cart.cartItems().first!
         cart.increment(cartItem: cartItem)
         
+        XCTAssert(catalog.totalItems() == 42)
         XCTAssert(cart.totalItems() == 3)
         XCTAssert(cart.cartItems().count == 1)
         XCTAssert(cartItem.storeItem.code == mockStoreItem.code)
@@ -101,6 +112,7 @@ class CartServiceTests: XCTestCase {
         let cartItem = cart.cartItems().first!
         cart.decrement(cartItem: cartItem)
         
+        XCTAssert(catalog.totalItems() == 44)
         XCTAssert(cart.totalItems() == 1)
         XCTAssert(cart.cartItems().count == 1)
         XCTAssert(cartItem.storeItem.code == mockStoreItem.code)
@@ -112,6 +124,7 @@ class CartServiceTests: XCTestCase {
         let cartItem = cart.cartItems().first!
         cart.decrement(cartItem: cartItem)
         
+        XCTAssert(catalog.totalItems() == 45)
         XCTAssert(cart.totalItems() == 0)
         XCTAssert(cart.cartItems().count == 0)
     }

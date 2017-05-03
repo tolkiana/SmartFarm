@@ -42,8 +42,6 @@ class CatalogService: CatalogProtocol {
     }
     
     func decrement(item: StoreItem, quantity: Int) {
-        precondition(quantity <= item.numberAvailable)
-        
         guard quantity > 0 else {
             return
         }
@@ -56,13 +54,15 @@ class CatalogService: CatalogProtocol {
         guard let itemIndex = modifiedCategory.items.index(where: {$0.code == item.code}) else {
             return
         }
-        guard quantity != item.numberAvailable else {
+        guard var modifiedItem = self.item(with: item.code) else {
+            return
+        }
+        guard quantity != modifiedItem.numberAvailable else {
             modifiedCategory.items.remove(at: itemIndex)
             categories?[categoryIndex] = modifiedCategory
             return
         }
         
-        var modifiedItem = item
         modifiedItem.numberAvailable = modifiedItem.numberAvailable - quantity
         modifiedCategory.items[itemIndex] = modifiedItem
         categories?[categoryIndex] = modifiedCategory
@@ -85,8 +85,10 @@ class CatalogService: CatalogProtocol {
             categories?[categoryIndex] = modifiedCategory
             return
         }
+        guard var modifiedItem = self.item(with: item.code) else {
+            return
+        }
         
-        var modifiedItem = item
         modifiedItem.numberAvailable = modifiedItem.numberAvailable + quantity
         modifiedCategory.items[itemIndex] = modifiedItem
         categories?[categoryIndex] = modifiedCategory
