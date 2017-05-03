@@ -28,7 +28,7 @@
                    "categoryCode": "001",
                    "name": "horse",
                    "image": "🐴",
-                   "price": 12.0,
+                   "price": 120.0,
                    "numberAvailable": 5
                    }, {
                    "code": "005",
