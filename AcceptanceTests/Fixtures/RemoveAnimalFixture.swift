@@ -10,22 +10,36 @@ import Foundation
 
 @objc(RemoveAnimalFixture)
 class RemoveAnimalFixture: NSObject {
-    var product = ""
-    var quantity = 0
+    let catalog = CatalogService.shared
+    let cart = CartService.shared
     
-    func goatsInCatalog() -> String {
-        return "0"
-    }
+    var product = ""
+    var quantity = ""
     
     func productsInCatalog() -> String {
-        return "0"
+        let code = ItemMapper.code(forItem: product)
+        guard let cartItem = cart.cartItems().filter({ $0.storeItem.code == code }).first else {
+            return ""
+        }
+        cart.remove(cartItem: cartItem)
+        let total = catalog.totalItems(forCategoryCode: cartItem.storeItem.categoryCode)
+        
+        return "\(total)"
     }
     
     func productsInCart() -> String {
-        return "0"
+        return "\(cart.totalItems())"
+    }
+    
+    func goatsInCatalog() -> String {
+        let code = ItemMapper.code(forItem: product)
+        guard let goats = catalog.item(with: code) else {
+            return "0"
+        }
+        return "\(goats.numberAvailable)"
     }
     
     func cartTotalAmount() -> String {
-        return "0.0"
+        return "\(cart.totalAmount())"
     }
 }

@@ -10,22 +10,39 @@ import Foundation
 
 @objc(AddGoatFixture)
 class AddGoatFixture: NSObject {
-    var product = ""
-    var quantity = 0
+    let catalog = CatalogService.shared
+    let cart = CartService.shared
     
-    func goatsInCatalog() -> String {
-        return "0"
-    }
+    var product = ""
+    var quantity = ""
     
     func productsInCatalog() -> String {
-        return "0"
+        let code = ItemMapper.code(forItem: product)
+        guard let item = catalog.item(with: code) else {
+            return ""
+        }
+        guard let qty = Int(quantity) else {
+            return ""
+        }
+        cart.add(storeItem: item, quantity: qty)
+        let total = catalog.totalItems(forCategoryCode: item.categoryCode)
+        
+        return "\(total)"
     }
     
     func productsInCart() -> String {
-        return "0"
+        return "\(cart.totalItems())"
+    }
+    
+    func goatsInCatalog() -> String {
+        let code = ItemMapper.code(forItem: product)
+        guard let goats = catalog.item(with: code) else {
+            return "0"
+        }
+        return "\(goats.numberAvailable)"
     }
     
     func cartTotalAmount() -> String {
-        return "0.0"
+        return "\(cart.totalAmount())"
     }
 }
