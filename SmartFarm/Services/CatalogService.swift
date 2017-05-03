@@ -96,6 +96,13 @@ class CatalogService: CatalogProtocol {
         return category.items.map{$0.numberAvailable}.reduce(0, +)
     }
     
+    func totalItems(forCategoryCode code: Code) -> Int {
+        guard let category = self.category(with: code) else {
+            return 0
+        }
+        return category.items.map{$0.numberAvailable}.reduce(0, +)
+    }
+    
     func totalItems() -> Int {
         guard let items = allItems() else {
             return 0

@@ -120,6 +120,12 @@ class CatalogServiceTests: XCTestCase {
         XCTAssert(total == 15)
     }
     
+    func test_get_total_items_for_category_code() {
+        let total = CatalogService.shared.totalItems(forCategoryCode: "002")
+        
+        XCTAssert(total == 15)
+    }
+    
     func test_get_total_items() {
         let total = CatalogService.shared.totalItems()
         
