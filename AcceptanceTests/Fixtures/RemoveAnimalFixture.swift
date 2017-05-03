@@ -18,7 +18,7 @@ class RemoveAnimalFixture: NSObject {
     
     func productsInCatalog() -> String {
         let code = ItemMapper.code(forItem: product)
-        guard let cartItem = cart.cartItems().filter({ $0.storeItem.code == code }).first else {
+        guard let cartItem = cart.cartItem(withStoreItemCode: code) else {
             return ""
         }
         cart.remove(cartItem: cartItem)

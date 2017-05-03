@@ -9,6 +9,8 @@
 import Foundation
 
 protocol CartProtocol {
+    typealias Code = String
+    
     func cartItems() -> [CartItem]
     func totalItems() -> Int
     func totalAmount() -> Float
@@ -16,6 +18,7 @@ protocol CartProtocol {
     func remove(cartItem: CartItem)
     func increment(cartItem: CartItem)
     func decrement(cartItem: CartItem)
+    func cartItem(withStoreItemCode: Code) -> CartItem?
     func clearItems()
     func checkout(completion: () -> Void)
 }

@@ -129,6 +129,21 @@ class CartServiceTests: XCTestCase {
         XCTAssert(cart.cartItems().count == 0)
     }
     
+    func test_cart_item_with_store_item_code() {
+        let mockStoreItem = MockFactory().mockItem
+        cart.add(storeItem: mockStoreItem, quantity: 1)
+        let cartItem = cart.cartItem(withStoreItemCode: mockStoreItem.code)
+        
+        XCTAssertNotNil(cartItem)
+    }
+    
+    func test_cart_item_with_store_item_code_not_found() {
+        let mockStoreItem = MockFactory().mockItem
+        let cartItem = cart.cartItem(withStoreItemCode: mockStoreItem.code)
+        
+        XCTAssertNil(cartItem)
+    }
+    
     func test_clear_items() {
         let mockStoreItem = MockFactory().mockItem
         cart.add(storeItem: mockStoreItem, quantity: 5)

@@ -9,7 +9,7 @@
 import Foundation
 
 class CartService: CartProtocol {
-    
+    typealias Code = String
     private var items: [CartItem] = []
     
     // MARK: - Singleton
@@ -76,6 +76,12 @@ class CartService: CartProtocol {
         items[index] = cartItem
         
         CatalogService.shared.increment(item: cartItem.storeItem, quantity: 1)
+    }
+    
+    func cartItem(withStoreItemCode code: Code) -> CartItem? {
+        return cartItems()
+            .filter({ $0.storeItem.code == code })
+            .first
     }
     
     func clearItems() {
