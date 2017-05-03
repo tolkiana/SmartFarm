@@ -73,6 +73,7 @@
 		38F7A7EB1EB83B4E0034DA9E /* MockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F6535C1EB196FB00E08FB6 /* MockFactory.swift */; };
 		38F7A7EC1EB83B530034DA9E /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6E01E91EAB80084A2ED /* JSONReader.swift */; };
 		38F7A7EE1EB944BD0034DA9E /* CatalogFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7ED1EB944BD0034DA9E /* CatalogFixture.swift */; };
+		38F7A7F11EB952DD0034DA9E /* ItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F01EB952DD0034DA9E /* ItemMapper.swift */; };
 		3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */; };
 		4AE6CDE934B89F083854D5D9 /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC154B762F6CA320EA0614C8 /* Pods_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -134,6 +135,7 @@
 		38F7A7D01EB52C5A0034DA9E /* CatalogProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogProtocol.swift; sourceTree = "<group>"; };
 		38F7A7D71EB64FBC0034DA9E /* CartProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartProtocol.swift; sourceTree = "<group>"; };
 		38F7A7ED1EB944BD0034DA9E /* CatalogFixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogFixture.swift; sourceTree = "<group>"; };
+		38F7A7F01EB952DD0034DA9E /* ItemMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemMapper.swift; sourceTree = "<group>"; };
 		6484D6F75151074DAA9BDD96 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390F33BB35493E8571F6446 /* Pods-SmartFarmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFarmTests/Pods-SmartFarmTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				3826DD1E1E8B3ED900340C07 /* Info.plist */,
+				38F7A7EF1EB952AB0034DA9E /* Helpers */,
 				3826DD191E8B3ED900340C07 /* Fixtures */,
 				3826DD161E8B3ED900340C07 /* Supporting Files */,
 			);
@@ -369,6 +372,14 @@
 				38F6535C1EB196FB00E08FB6 /* MockFactory.swift */,
 			);
 			name = Mocks;
+			sourceTree = "<group>";
+		};
+		38F7A7EF1EB952AB0034DA9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				38F7A7F01EB952DD0034DA9E /* ItemMapper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		414BD0EE9C478A0B5BC3F9CB /* Pods */ = {
@@ -663,6 +674,7 @@
 				38F7A7E71EB83B200034DA9E /* CartItem.swift in Sources */,
 				38F7A7E51EB83B130034DA9E /* CatalogProtocol.swift in Sources */,
 				38F7A7EB1EB83B4E0034DA9E /* MockFactory.swift in Sources */,
+				38F7A7F11EB952DD0034DA9E /* ItemMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
