@@ -58,11 +58,9 @@ class CatalogService: CatalogProtocol {
             return
         }
         guard quantity != modifiedItem.numberAvailable else {
-            modifiedCategory.items.remove(at: itemIndex)
-            categories?[categoryIndex] = modifiedCategory
+            remove(item: item, at: itemIndex)
             return
         }
-        
         modifiedItem.numberAvailable = modifiedItem.numberAvailable - quantity
         modifiedCategory.items[itemIndex] = modifiedItem
         categories?[categoryIndex] = modifiedCategory
@@ -79,16 +77,12 @@ class CatalogService: CatalogProtocol {
             return
         }
         guard let itemIndex = modifiedCategory.items.index(where: {$0.code == item.code}) else {
-            var modifiedItem = item
-            modifiedItem.numberAvailable = quantity
-            modifiedCategory.items.append(modifiedItem)
-            categories?[categoryIndex] = modifiedCategory
+            add(item: item, quantity: quantity)
             return
         }
         guard var modifiedItem = self.item(with: item.code) else {
             return
         }
-        
         modifiedItem.numberAvailable = modifiedItem.numberAvailable + quantity
         modifiedCategory.items[itemIndex] = modifiedItem
         categories?[categoryIndex] = modifiedCategory
@@ -110,5 +104,31 @@ class CatalogService: CatalogProtocol {
             return 0
         }
         return items.map{$0.numberAvailable}.reduce(0, +)
+    }
+    
+    // MARK: - Private
+    
+    func remove(item: StoreItem, at index: Int) {
+        guard var modifiedCategory = category(with: item.categoryCode) else {
+            return
+        }
+        guard let categoryIndex = categories?.index(where: {$0.code == item.categoryCode}) else {
+            return
+        }
+        modifiedCategory.items.remove(at: index)
+        categories?[categoryIndex] = modifiedCategory
+    }
+    
+    func add(item: StoreItem, quantity: Int) {
+        guard var modifiedCategory = category(with: item.categoryCode) else {
+            return
+        }
+        guard let categoryIndex = categories?.index(where: {$0.code == item.categoryCode}) else {
+            return
+        }
+        var modifiedItem = item
+        modifiedItem.numberAvailable = quantity
+        modifiedCategory.items.append(modifiedItem)
+        categories?[categoryIndex] = modifiedCategory
     }
 }
