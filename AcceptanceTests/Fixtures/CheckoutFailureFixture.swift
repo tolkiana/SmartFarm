@@ -1,5 +1,5 @@
 //
-//  CheckoutFixture.swift
+//  CheckoutFailureFixture.swift
 //  SmartFarm
 //
 //  Created by Nelida Velazquez on 3/31/17.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-@objc(CheckoutFixture)
-class CheckoutFixture: NSObject {
-    var success = true
+@objc(CheckoutFailureFixture)
+class CheckoutFailureFixture: NSObject {
     
     func productsInCatalog() -> String {
         return "0"
