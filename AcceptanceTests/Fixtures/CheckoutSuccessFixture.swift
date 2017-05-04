@@ -10,17 +10,20 @@ import Foundation
 
 @objc(CheckoutSuccessFixture)
 class CheckoutSuccessFixture: NSObject {
+    let catalog = CatalogService.shared
+    let cart = CartService.shared
     
     func productsInCatalog() -> String {
-        return "0"
+        let total = catalog.totalItems(forCategoryCode: "001")
+        return "\(total)"
     }
     
     func productsInCart() -> String {
-        return "0"
+        return "\(cart.totalItems())"
     }
     
     func cartTotalAmount() -> String {
-        return "0.0"
+        return "\(cart.totalAmount())"
     }
     
 }
