@@ -14,6 +14,7 @@ class CheckoutSuccessFixture: NSObject {
     let cart = CartService.shared
     
     func productsInCatalog() -> String {
+        cart.checkout {}
         let total = catalog.totalItems(forCategoryCode: "001")
         return "\(total)"
     }

@@ -89,7 +89,7 @@ class CartService: CartProtocol {
     }
     
     func checkout(completion: () -> Void) {
-    
+        clearItems()
     }
     
     // MARK: - Private
