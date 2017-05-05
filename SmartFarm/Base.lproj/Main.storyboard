@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Catalog View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CatalogViewController" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -85,6 +85,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cartButton" destination="fZo-Du-r09" id="cLU-Yj-nRb"/>
+                        <outlet property="tableView" destination="xbx-nJ-wwU" id="dpk-d7-qpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="-202.40000000000001" y="136.28185907046478"/>
         </scene>
-        <!--View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="xHJ-71-GLe">
             <objects>
-                <viewController id="q3m-T7-pQp" sceneMemberID="viewController">
+                <viewController id="q3m-T7-pQp" customClass="CartViewController" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yR5-sN-6hB"/>
                         <viewControllerLayoutGuide type="bottom" id="LtA-ZN-u2U"/>
@@ -209,7 +213,7 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bbz-gI-ez5"/>
-                                    <barButtonItem title="Checkout" id="Rai-nT-bEi"/>
+                                    <barButtonItem title="Checkout" id="rAR-KA-YSg"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -224,6 +228,10 @@
                             <constraint firstAttribute="trailing" secondItem="PMz-Eo-5Ku" secondAttribute="trailing" id="qZm-in-614"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="checkoutButton" destination="rAR-KA-YSg" id="wOA-BU-Kqe"/>
+                        <outlet property="tableView" destination="PMz-Eo-5Ku" id="aFV-hN-kFY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rhw-oX-pTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
