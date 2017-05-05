@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sTF-Ou-x95">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sTF-Ou-x95" customClass="CatalogItemCell" customModule="SmartFarm" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sTF-Ou-x95" id="mjc-MF-iHW">
@@ -61,6 +61,11 @@
                                                 <constraint firstItem="gmZ-9e-rvy" firstAttribute="leading" secondItem="w19-V7-HqE" secondAttribute="trailing" constant="20" id="wlB-fI-LuG"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emojiLabel" destination="w19-V7-HqE" id="Zhg-ww-Jan"/>
+                                            <outlet property="nameLabel" destination="gmZ-9e-rvy" id="k1m-S6-EtU"/>
+                                            <outlet property="priceLabel" destination="Dx1-Jd-gwZ" id="qrX-o5-OYx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -119,7 +124,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ey3-u6-oTQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ey3-u6-oTQ" customClass="CartItemCell" customModule="SmartFarm" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ey3-u6-oTQ" id="idg-Bl-REe">
@@ -160,8 +165,14 @@
                                                 <constraint firstItem="vPb-BX-DSK" firstAttribute="centerY" secondItem="idg-Bl-REe" secondAttribute="centerY" id="t4x-2X-cRH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emojiLabel" destination="vPb-BX-DSK" id="PNU-F4-TMm"/>
+                                            <outlet property="nameLabel" destination="Bx8-k7-jyh" id="Kz0-Pv-qMb"/>
+                                            <outlet property="quantityLabel" destination="qfy-wg-Te3" id="hGg-rS-IFa"/>
+                                            <outlet property="stepper" destination="FfL-zH-FuF" id="mvC-P4-6Ct"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GZn-qe-8Wj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GZn-qe-8Wj" customClass="CartTotalCell" customModule="SmartFarm" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="80" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GZn-qe-8Wj" id="keC-ef-myS">
@@ -188,6 +199,9 @@
                                                 <constraint firstItem="odu-o4-BtV" firstAttribute="centerY" secondItem="keC-ef-myS" secondAttribute="centerY" id="Wbw-pb-xy0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="totalAmountLabel" destination="Yyz-U2-UQy" id="t4m-hw-f76"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
