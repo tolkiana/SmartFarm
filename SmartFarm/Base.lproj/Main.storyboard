@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Catalog View Controller-->
+        <!--SmartFarm-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CatalogViewController" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +101,7 @@
                             <constraint firstAttribute="trailing" secondItem="xbx-nJ-wwU" secondAttribute="trailing" id="mkM-xu-u0x"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="XxI-ve-oQO">
+                    <navigationItem key="navigationItem" title="SmartFarm" id="XxI-ve-oQO">
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="fZo-Du-r09">
                             <connections>
                                 <segue destination="q3m-T7-pQp" kind="show" id="4OD-Vh-Uel"/>
