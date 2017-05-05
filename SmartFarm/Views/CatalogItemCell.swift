@@ -10,6 +10,7 @@ import UIKit
 
 class CatalogItemCell: UITableViewCell {
     
+    @IBOutlet var quantityLabel: UILabel!
     @IBOutlet var emojiLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
