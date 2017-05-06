@@ -16,6 +16,11 @@ struct TotalViewModel {
     }
     
     var totalItems: String {
-        return "\(cart.totalItems())"
+        let totalItems = cart.totalItems()
+        
+        if totalItems > 1 {
+            return "Total (\(totalItems) item):"
+        }
+        return "Total (\(totalItems) items):"
     }
 }

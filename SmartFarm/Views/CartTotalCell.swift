@@ -11,4 +11,5 @@ import UIKit
 class CartTotalCell: UITableViewCell {
 
     @IBOutlet var totalAmountLabel: UILabel!
+    @IBOutlet var totalItemsLabel: UILabel!
 }

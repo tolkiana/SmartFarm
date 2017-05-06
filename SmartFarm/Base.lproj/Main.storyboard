@@ -206,8 +206,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odu-o4-BtV">
-                                                    <rect key="frame" x="222" y="14.5" width="50" height="23"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total (0 items):" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odu-o4-BtV">
+                                                    <rect key="frame" x="148.5" y="14.5" width="133.5" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -220,7 +220,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Yyz-U2-UQy" firstAttribute="leading" secondItem="odu-o4-BtV" secondAttribute="trailing" constant="30" id="Akz-FQ-8Ks"/>
+                                                <constraint firstItem="Yyz-U2-UQy" firstAttribute="leading" secondItem="odu-o4-BtV" secondAttribute="trailing" constant="20" id="Akz-FQ-8Ks"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Yyz-U2-UQy" secondAttribute="trailing" constant="25" id="HlD-LT-E49"/>
                                                 <constraint firstItem="Yyz-U2-UQy" firstAttribute="centerY" secondItem="keC-ef-myS" secondAttribute="centerY" id="LH0-0J-Te2"/>
                                                 <constraint firstItem="odu-o4-BtV" firstAttribute="centerY" secondItem="keC-ef-myS" secondAttribute="centerY" id="Wbw-pb-xy0"/>
@@ -228,6 +228,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="totalAmountLabel" destination="Yyz-U2-UQy" id="t4m-hw-f76"/>
+                                            <outlet property="totalItemsLabel" destination="odu-o4-BtV" id="ju9-b9-4dG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
