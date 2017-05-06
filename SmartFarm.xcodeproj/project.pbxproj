@@ -81,6 +81,15 @@
 		38F7A7FB1EBC142A0034DA9E /* CartTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7FA1EBC142A0034DA9E /* CartTotalCell.swift */; };
 		38F7A7FD1EBC15600034DA9E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7FC1EBC15600034DA9E /* CartViewController.swift */; };
 		38F7A7FE1EBC17C90034DA9E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7FC1EBC15600034DA9E /* CartViewController.swift */; };
+		38F7A8001EBE6A770034DA9E /* CatalogItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7FF1EBE6A770034DA9E /* CatalogItemViewModel.swift */; };
+		38F7A8021EBE6A890034DA9E /* CartItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8011EBE6A890034DA9E /* CartItemViewModel.swift */; };
+		38F7A8041EBE6ABA0034DA9E /* TotalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8031EBE6ABA0034DA9E /* TotalViewModel.swift */; };
+		38F7A8051EBE6C7A0034DA9E /* CatalogItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7FF1EBE6A770034DA9E /* CatalogItemViewModel.swift */; };
+		38F7A8061EBE6C7E0034DA9E /* CatalogItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7FF1EBE6A770034DA9E /* CatalogItemViewModel.swift */; };
+		38F7A8071EBE6C810034DA9E /* CartItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8011EBE6A890034DA9E /* CartItemViewModel.swift */; };
+		38F7A8081EBE6C820034DA9E /* CartItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8011EBE6A890034DA9E /* CartItemViewModel.swift */; };
+		38F7A8091EBE6C840034DA9E /* TotalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8031EBE6ABA0034DA9E /* TotalViewModel.swift */; };
+		38F7A80A1EBE6C840034DA9E /* TotalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8031EBE6ABA0034DA9E /* TotalViewModel.swift */; };
 		3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */; };
 		4AE6CDE934B89F083854D5D9 /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC154B762F6CA320EA0614C8 /* Pods_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -148,6 +157,9 @@
 		38F7A7F81EBC11E10034DA9E /* CartItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
 		38F7A7FA1EBC142A0034DA9E /* CartTotalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTotalCell.swift; sourceTree = "<group>"; };
 		38F7A7FC1EBC15600034DA9E /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		38F7A7FF1EBE6A770034DA9E /* CatalogItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CatalogItemViewModel.swift; path = SmartFarm/ViewControllers/CatalogItemViewModel.swift; sourceTree = SOURCE_ROOT; };
+		38F7A8011EBE6A890034DA9E /* CartItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartItemViewModel.swift; path = SmartFarm/ViewControllers/CartItemViewModel.swift; sourceTree = SOURCE_ROOT; };
+		38F7A8031EBE6ABA0034DA9E /* TotalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TotalViewModel.swift; path = SmartFarm/ViewControllers/TotalViewModel.swift; sourceTree = SOURCE_ROOT; };
 		6484D6F75151074DAA9BDD96 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390F33BB35493E8571F6446 /* Pods-SmartFarmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFarmTests/Pods-SmartFarmTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -259,6 +271,9 @@
 		38CFE6A81E9055F10084A2ED /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				38F7A7FF1EBE6A770034DA9E /* CatalogItemViewModel.swift */,
+				38F7A8011EBE6A890034DA9E /* CartItemViewModel.swift */,
+				38F7A8031EBE6ABA0034DA9E /* TotalViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -686,6 +701,7 @@
 				38CFE69F1E8F50C90084A2ED /* AddAnimalFixture.swift in Sources */,
 				38F7A7E11EB83B050034DA9E /* ResultType.swift in Sources */,
 				38F7A7F41EBAD24E0034DA9E /* CheckoutSuccessFixture.swift in Sources */,
+				38F7A8081EBE6C820034DA9E /* CartItemViewModel.swift in Sources */,
 				38F7A7E81EB83B230034DA9E /* StoreItem.swift in Sources */,
 				3826DD181E8B3ED900340C07 /* AcceptanceTests.m in Sources */,
 				38F7A7E61EB83B1C0034DA9E /* CartProtocol.swift in Sources */,
@@ -698,8 +714,10 @@
 				38CFE6A51E8F53FA0084A2ED /* CheckoutFailureFixture.swift in Sources */,
 				38CFE6A31E8F53D10084A2ED /* RemoveAnimalFixture.swift in Sources */,
 				38F7A7EC1EB83B530034DA9E /* JSONReader.swift in Sources */,
+				38F7A8061EBE6C7E0034DA9E /* CatalogItemViewModel.swift in Sources */,
 				38F7A7E71EB83B200034DA9E /* CartItem.swift in Sources */,
 				38F7A7E51EB83B130034DA9E /* CatalogProtocol.swift in Sources */,
+				38F7A80A1EBE6C840034DA9E /* TotalViewModel.swift in Sources */,
 				38F7A7EB1EB83B4E0034DA9E /* MockFactory.swift in Sources */,
 				38F7A7F11EB952DD0034DA9E /* ItemMapper.swift in Sources */,
 			);
@@ -716,11 +734,14 @@
 				38F653511EAC465E00E08FB6 /* CartService.swift in Sources */,
 				38F7A7D11EB52C5A0034DA9E /* CatalogProtocol.swift in Sources */,
 				38F7A7D81EB64FBC0034DA9E /* CartProtocol.swift in Sources */,
+				38F7A8041EBE6ABA0034DA9E /* TotalViewModel.swift in Sources */,
 				3884FF1F1EA1494100AD1E20 /* NetworkManager.swift in Sources */,
+				38F7A8021EBE6A890034DA9E /* CartItemViewModel.swift in Sources */,
 				38F6534B1EAC3EA000E08FB6 /* ResultType.swift in Sources */,
 				38F7A7D61EB59AB90034DA9E /* JSONReader.swift in Sources */,
 				38F7A7F71EBC11D20034DA9E /* CatalogItemCell.swift in Sources */,
 				38CFE6C61E91D76E0084A2ED /* SerializationError.swift in Sources */,
+				38F7A8001EBE6A770034DA9E /* CatalogItemViewModel.swift in Sources */,
 				38F7A7FB1EBC142A0034DA9E /* CartTotalCell.swift in Sources */,
 				38CDE95E1EA2F1E600ABAB28 /* HTTPMethod.swift in Sources */,
 				38CFE6B51E9059C70084A2ED /* CartItem.swift in Sources */,
@@ -744,6 +765,7 @@
 				38F7A7CD1EB522500034DA9E /* CatalogService.swift in Sources */,
 				38CFE6E11E91EAB80084A2ED /* JSONReader.swift in Sources */,
 				38F7A7C71EB51B8C0034DA9E /* SerializationError.swift in Sources */,
+				38F7A8071EBE6C810034DA9E /* CartItemViewModel.swift in Sources */,
 				38CFE6CC1E91DBBA0084A2ED /* CategoryTests.swift in Sources */,
 				38F7A7CE1EB522550034DA9E /* CartService.swift in Sources */,
 				38F7A7C41EB51B830034DA9E /* CartItem.swift in Sources */,
@@ -756,8 +778,10 @@
 				38F6535D1EB196FB00E08FB6 /* MockFactory.swift in Sources */,
 				38F7A7C81EB5223F0034DA9E /* NetworkError.swift in Sources */,
 				38F7A7CC1EB5224D0034DA9E /* HTTPMethod.swift in Sources */,
+				38F7A8051EBE6C7A0034DA9E /* CatalogItemViewModel.swift in Sources */,
 				38F7A7CA1EB522460034DA9E /* NetworkManager.swift in Sources */,
 				38F653551EAC4DAD00E08FB6 /* CatalogServiceTests.swift in Sources */,
+				38F7A8091EBE6C840034DA9E /* TotalViewModel.swift in Sources */,
 				38F7A7C61EB51B890034DA9E /* Category.swift in Sources */,
 				38F7A7CB1EB5224A0034DA9E /* RequestBuilder.swift in Sources */,
 			);
