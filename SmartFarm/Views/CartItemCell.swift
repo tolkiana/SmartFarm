@@ -15,4 +15,11 @@ class CartItemCell: UITableViewCell {
     @IBOutlet var quantityLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var stepper: UIStepper!
+    
+    func configure(with viewModel: CartItemViewModel) {
+        self.emojiLabel.text = viewModel.emoji
+        self.nameLabel.text = viewModel.name
+        self.quantityLabel.text = viewModel.quantity
+        self.priceLabel.text = viewModel.price
+    }
 }

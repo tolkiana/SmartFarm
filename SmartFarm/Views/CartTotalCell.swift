@@ -12,4 +12,9 @@ class CartTotalCell: UITableViewCell {
 
     @IBOutlet var totalAmountLabel: UILabel!
     @IBOutlet var totalItemsLabel: UILabel!
+    
+    func configure(with viewModel: TotalViewModel) {
+        self.totalItemsLabel.text = viewModel.totalItems
+        self.totalAmountLabel.text = viewModel.total
+    }
 }

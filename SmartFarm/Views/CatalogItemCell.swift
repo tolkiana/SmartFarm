@@ -14,4 +14,11 @@ class CatalogItemCell: UITableViewCell {
     @IBOutlet var emojiLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
+    
+    func configure(with viewModel: CatalogItemViewModel) {
+        self.quantityLabel.text = viewModel.stock
+        self.emojiLabel.text = viewModel.emoji
+        self.nameLabel.text = viewModel.name
+        self.priceLabel.text = viewModel.price
+    }
 }
