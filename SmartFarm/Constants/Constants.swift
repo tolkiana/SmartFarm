@@ -12,13 +12,13 @@ struct StoryboardConstants {
     struct CellIdentifiers {
         static let catalogItemCell = "CatalogItemCellIdentifier"
         static let cartItemCell = "CartItemCellIdentifier"
-        static let totalItemCell = "TotalCellIdentifier"
+        static let totalCell = "TotalCellIdentifier"
     }
 }
 
 struct CartViewControllerConstants {
-    struct Sections {
-        static let items = 0
+    struct Section {
+        static let item = 0
         static let total = 1
     }
 }
