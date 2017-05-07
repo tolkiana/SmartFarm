@@ -20,4 +20,11 @@ struct CatalogItemViewModel {
         self.name = storeItem.name
         self.price = "$\(storeItem.price)"
     }
+    
+    init() {
+        self.stock = ""
+        self.emoji = ""
+        self.name = ""
+        self.price = "$-.-"
+    }
 }
