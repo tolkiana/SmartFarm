@@ -9,21 +9,27 @@
 import UIKit
 
 class CatalogViewController: UIViewController {
-
+    let viewModel = CatalogViewModel()
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var cartButton: UIBarButtonItem!
 }
 
 extension CatalogViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1;
+        return viewModel.numberOfCategories;
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        return viewModel.numberOfItems(inSection: section);
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.catalogItemCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.catalogItemCell, for: indexPath) as! CatalogItemCell
+        let itemViewModel = viewModel.itemViewModel(forIndexPath: indexPath)
+        cell.configure(with: itemViewModel)
+        
+        return cell
     }
     
 }
