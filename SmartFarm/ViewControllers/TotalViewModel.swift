@@ -9,7 +9,7 @@
 import Foundation
 
 struct TotalViewModel {
-    let cart = CartService.shared
+    private let cart = CartService.shared
     
     var total: String {
         return "$\(cart.totalAmount())"
