@@ -13,5 +13,6 @@ class CartItemCell: UITableViewCell {
     @IBOutlet var emojiLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var quantityLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
     @IBOutlet var stepper: UIStepper!
 }

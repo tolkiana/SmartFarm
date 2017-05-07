@@ -17,7 +17,7 @@ struct CartItemViewModel {
     init(cartItem: CartItem) {
         self.emoji = cartItem.storeItem.icon
         self.name = cartItem.storeItem.name
-        self.quantity = "\(cartItem.quantity)"
-        self.price = "\(Float(cartItem.quantity) * cartItem.storeItem.price)"
+        self.quantity = "quantity: \(cartItem.quantity)"
+        self.price = "$\(Float(cartItem.quantity) * cartItem.storeItem.price)"
     }
 }
