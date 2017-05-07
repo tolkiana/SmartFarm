@@ -33,9 +33,6 @@ struct CatalogViewModel {
         guard let category = catalog.allCategories()?[indexPath.section] else {
             return CatalogItemViewModel()
         }
-        guard category.items.count < indexPath.row  else {
-            return CatalogItemViewModel()
-        }
         let item = category.items[indexPath.row]
         return CatalogItemViewModel(storeItem: item)
     }
