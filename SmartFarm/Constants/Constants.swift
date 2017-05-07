@@ -15,3 +15,10 @@ struct StoryboardConstants {
         static let totalItemCell = "TotalCellIdentifier"
     }
 }
+
+struct CartViewControllerConstants {
+    struct Sections {
+        static let items = 0
+        static let total = 1
+    }
+}
