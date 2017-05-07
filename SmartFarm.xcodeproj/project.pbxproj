@@ -93,6 +93,20 @@
 		38F7A80D1EBFC0EA0034DA9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A80C1EBFC0EA0034DA9E /* Constants.swift */; };
 		38F7A8131EBFDC440034DA9E /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8121EBFDC440034DA9E /* CatalogViewModel.swift */; };
 		38F7A8151EBFDC580034DA9E /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8141EBFDC580034DA9E /* CartViewModel.swift */; };
+		38F7A8161EBFE8180034DA9E /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8121EBFDC440034DA9E /* CatalogViewModel.swift */; };
+		38F7A8171EBFE8180034DA9E /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8121EBFDC440034DA9E /* CatalogViewModel.swift */; };
+		38F7A8181EBFE81B0034DA9E /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8141EBFDC580034DA9E /* CartViewModel.swift */; };
+		38F7A8191EBFE81C0034DA9E /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8141EBFDC580034DA9E /* CartViewModel.swift */; };
+		38F7A81A1EBFE83A0034DA9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A80C1EBFC0EA0034DA9E /* Constants.swift */; };
+		38F7A81B1EBFE83B0034DA9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A80C1EBFC0EA0034DA9E /* Constants.swift */; };
+		38F7A81C1EBFE84A0034DA9E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7FC1EBC15600034DA9E /* CartViewController.swift */; };
+		38F7A81D1EBFE84C0034DA9E /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CFE6AA1E9056470084A2ED /* CatalogViewController.swift */; };
+		38F7A81E1EBFE8500034DA9E /* CartTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7FA1EBC142A0034DA9E /* CartTotalCell.swift */; };
+		38F7A81F1EBFE8510034DA9E /* CartTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7FA1EBC142A0034DA9E /* CartTotalCell.swift */; };
+		38F7A8201EBFE8540034DA9E /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F81EBC11E10034DA9E /* CartItemCell.swift */; };
+		38F7A8211EBFE8540034DA9E /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F81EBC11E10034DA9E /* CartItemCell.swift */; };
+		38F7A8221EBFE8570034DA9E /* CatalogItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F61EBC11D20034DA9E /* CatalogItemCell.swift */; };
+		38F7A8231EBFE8580034DA9E /* CatalogItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F61EBC11D20034DA9E /* CatalogItemCell.swift */; };
 		3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */; };
 		4AE6CDE934B89F083854D5D9 /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC154B762F6CA320EA0614C8 /* Pods_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -711,29 +725,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F7A8221EBFE8570034DA9E /* CatalogItemCell.swift in Sources */,
 				38F7A7DF1EB83AED0034DA9E /* CartService.swift in Sources */,
 				38F7A7E01EB83B030034DA9E /* NetworkError.swift in Sources */,
 				38F7A7E21EB83B080034DA9E /* NetworkManager.swift in Sources */,
 				38CFE6A11E8F53900084A2ED /* AddGoatFixture.swift in Sources */,
 				38CFE69F1E8F50C90084A2ED /* AddAnimalFixture.swift in Sources */,
+				38F7A81B1EBFE83B0034DA9E /* Constants.swift in Sources */,
 				38F7A7E11EB83B050034DA9E /* ResultType.swift in Sources */,
 				38F7A7F41EBAD24E0034DA9E /* CheckoutSuccessFixture.swift in Sources */,
 				38F7A8081EBE6C820034DA9E /* CartItemViewModel.swift in Sources */,
 				38F7A7E81EB83B230034DA9E /* StoreItem.swift in Sources */,
 				3826DD181E8B3ED900340C07 /* AcceptanceTests.m in Sources */,
+				38F7A8201EBFE8540034DA9E /* CartItemCell.swift in Sources */,
 				38F7A7E61EB83B1C0034DA9E /* CartProtocol.swift in Sources */,
 				38F7A7EA1EB83B280034DA9E /* SerializationError.swift in Sources */,
 				38F7A7EE1EB944BD0034DA9E /* CatalogFixture.swift in Sources */,
 				38F7A7E31EB83B0B0034DA9E /* RequestBuilder.swift in Sources */,
 				38F7A7E41EB83B0E0034DA9E /* HTTPMethod.swift in Sources */,
 				38F7A7E91EB83B250034DA9E /* Category.swift in Sources */,
+				38F7A8191EBFE81C0034DA9E /* CartViewModel.swift in Sources */,
 				38F7A7DE1EB83AE90034DA9E /* CatalogService.swift in Sources */,
+				38F7A8171EBFE8180034DA9E /* CatalogViewModel.swift in Sources */,
 				38CFE6A51E8F53FA0084A2ED /* CheckoutFailureFixture.swift in Sources */,
 				38CFE6A31E8F53D10084A2ED /* RemoveAnimalFixture.swift in Sources */,
+				38F7A81C1EBFE84A0034DA9E /* CartViewController.swift in Sources */,
 				38F7A7EC1EB83B530034DA9E /* JSONReader.swift in Sources */,
 				38F7A8061EBE6C7E0034DA9E /* CatalogItemViewModel.swift in Sources */,
 				38F7A7E71EB83B200034DA9E /* CartItem.swift in Sources */,
 				38F7A7E51EB83B130034DA9E /* CatalogProtocol.swift in Sources */,
+				38F7A81D1EBFE84C0034DA9E /* CatalogViewController.swift in Sources */,
+				38F7A81E1EBFE8500034DA9E /* CartTotalCell.swift in Sources */,
 				38F7A80A1EBE6C840034DA9E /* TotalViewModel.swift in Sources */,
 				38F7A7EB1EB83B4E0034DA9E /* MockFactory.swift in Sources */,
 				38F7A7F11EB952DD0034DA9E /* ItemMapper.swift in Sources */,
@@ -783,24 +805,30 @@
 				38F6534D1EAC445100E08FB6 /* NetworkManagerTests.swift in Sources */,
 				38CFE6CE1E91DBD50084A2ED /* StoreItemTests.swift in Sources */,
 				38F7A7CD1EB522500034DA9E /* CatalogService.swift in Sources */,
+				38F7A81A1EBFE83A0034DA9E /* Constants.swift in Sources */,
 				38CFE6E11E91EAB80084A2ED /* JSONReader.swift in Sources */,
 				38F7A7C71EB51B8C0034DA9E /* SerializationError.swift in Sources */,
 				38F7A8071EBE6C810034DA9E /* CartItemViewModel.swift in Sources */,
 				38CFE6CC1E91DBBA0084A2ED /* CategoryTests.swift in Sources */,
 				38F7A7CE1EB522550034DA9E /* CartService.swift in Sources */,
 				38F7A7C41EB51B830034DA9E /* CartItem.swift in Sources */,
+				38F7A81F1EBFE8510034DA9E /* CartTotalCell.swift in Sources */,
 				38F653571EAC4DBF00E08FB6 /* CartServiceTests.swift in Sources */,
 				38F7A7CF1EB522610034DA9E /* CatalogViewController.swift in Sources */,
 				38F7A7C51EB51B860034DA9E /* StoreItem.swift in Sources */,
 				38F7A7D41EB5349A0034DA9E /* CatalogProtocol.swift in Sources */,
 				38F7A7FE1EBC17C90034DA9E /* CartViewController.swift in Sources */,
+				38F7A8181EBFE81B0034DA9E /* CartViewModel.swift in Sources */,
 				38CDE9631EA83E2400ABAB28 /* BuilderRequestTests.swift in Sources */,
+				38F7A8161EBFE8180034DA9E /* CatalogViewModel.swift in Sources */,
 				38F6535D1EB196FB00E08FB6 /* MockFactory.swift in Sources */,
 				38F7A7C81EB5223F0034DA9E /* NetworkError.swift in Sources */,
 				38F7A7CC1EB5224D0034DA9E /* HTTPMethod.swift in Sources */,
 				38F7A8051EBE6C7A0034DA9E /* CatalogItemViewModel.swift in Sources */,
 				38F7A7CA1EB522460034DA9E /* NetworkManager.swift in Sources */,
+				38F7A8231EBFE8580034DA9E /* CatalogItemCell.swift in Sources */,
 				38F653551EAC4DAD00E08FB6 /* CatalogServiceTests.swift in Sources */,
+				38F7A8211EBFE8540034DA9E /* CartItemCell.swift in Sources */,
 				38F7A8091EBE6C840034DA9E /* TotalViewModel.swift in Sources */,
 				38F7A7C61EB51B890034DA9E /* Category.swift in Sources */,
 				38F7A7CB1EB5224A0034DA9E /* RequestBuilder.swift in Sources */,
