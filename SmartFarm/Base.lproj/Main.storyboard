@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SmartFarm-->
+        <!--Smart Farm-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CatalogViewController" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +105,7 @@
                             <constraint firstAttribute="trailing" secondItem="xbx-nJ-wwU" secondAttribute="trailing" id="mkM-xu-u0x"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SmartFarm" id="XxI-ve-oQO">
+                    <navigationItem key="navigationItem" title="Smart Farm" id="XxI-ve-oQO">
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="fZo-Du-r09">
                             <connections>
                                 <segue destination="q3m-T7-pQp" kind="show" id="4OD-Vh-Uel"/>
@@ -165,6 +165,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FfL-zH-FuF">
                                                     <rect key="frame" x="263" y="12" width="94" height="29"/>
                                                     <color key="tintColor" red="0.25098039220000001" green="0.42745098040000001" blue="0.58431372550000005" alpha="0.87459590519999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="changeQuantity:" destination="Ey3-u6-oTQ" eventType="valueChanged" id="RV9-Of-Oyi"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPb-BX-DSK">
                                                     <rect key="frame" x="18" y="17" width="23" height="20.5"/>
