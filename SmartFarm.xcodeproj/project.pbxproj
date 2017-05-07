@@ -107,6 +107,7 @@
 		38F7A8211EBFE8540034DA9E /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F81EBC11E10034DA9E /* CartItemCell.swift */; };
 		38F7A8221EBFE8570034DA9E /* CatalogItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F61EBC11D20034DA9E /* CatalogItemCell.swift */; };
 		38F7A8231EBFE8580034DA9E /* CatalogItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F61EBC11D20034DA9E /* CatalogItemCell.swift */; };
+		38F7A8241EBFE93D0034DA9E /* catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 38CFE6D21E91DCF80084A2ED /* catalog.json */; };
 		3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */; };
 		4AE6CDE934B89F083854D5D9 /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC154B762F6CA320EA0614C8 /* Pods_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -598,6 +599,7 @@
 				38E7A6091E8B3DD40079DE1E /* LaunchScreen.storyboard in Resources */,
 				38E7A6061E8B3DD40079DE1E /* Assets.xcassets in Resources */,
 				38E7A6041E8B3DD40079DE1E /* Main.storyboard in Resources */,
+				38F7A8241EBFE93D0034DA9E /* catalog.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
