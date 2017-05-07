@@ -12,7 +12,7 @@ struct TotalViewModel {
     let cart = CartService.shared
     
     var total: String {
-        return "\(cart.totalAmount())"
+        return "$\(cart.totalAmount())"
     }
     
     var totalItems: String {

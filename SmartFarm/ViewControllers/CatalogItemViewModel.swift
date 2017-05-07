@@ -18,6 +18,6 @@ struct CatalogItemViewModel {
         self.stock = "\(storeItem.numberAvailable)"
         self.emoji = storeItem.icon
         self.name = storeItem.name
-        self.price = "\(storeItem.price)"
+        self.price = "$\(storeItem.price)"
     }
 }
