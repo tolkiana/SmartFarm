@@ -9,7 +9,8 @@
 import UIKit
 
 class CartViewController: UIViewController {
-
+    let viewModel = CartViewModel()
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var checkoutButton: UIBarButtonItem!
 }
@@ -20,15 +21,20 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if CartViewControllerConstants.Section.item == section {
-            return 2
+            return viewModel.numberOfItems()
         }
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if CartViewControllerConstants.Section.item == indexPath.section {
-            return tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.cartItemCell, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.cartItemCell) as! CartItemCell
+            let itemViewModel = viewModel.itemViewModel(forIndexPath: indexPath)
+            cell.configure(with: itemViewModel)
+            return cell
         }
-        return tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.totalCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.totalCell) as! CartTotalCell
+        cell.configure(with: TotalViewModel())
+        return cell
     }
 }
