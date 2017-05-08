@@ -13,6 +13,19 @@ class CatalogViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var cartButton: UIBarButtonItem!
+    
+    // MARK: - View Life cycle
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateCartButton()
+    }
+    
+    // MARK: - View Setup
+    
+    func updateCartButton() {
+        cartButton.title = viewModel.cartDescription
+    }
 }
 
 extension CatalogViewController: UITableViewDataSource, UITableViewDelegate {
@@ -26,7 +39,7 @@ extension CatalogViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.catalogItemCell, for: indexPath) as! CatalogItemCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.catalogItemCell) as! CatalogItemCell
         let itemViewModel = viewModel.itemViewModel(forIndexPath: indexPath)
         cell.configure(with: itemViewModel)
         
@@ -39,6 +52,7 @@ extension CatalogViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.addItem(atIndex: indexPath)
+        updateCartButton()
         tableView.reloadData()
     }
 }

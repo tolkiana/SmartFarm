@@ -16,6 +16,13 @@ struct CatalogViewModel {
         catalog.loadData {}
     }
     
+    var cartDescription: String {
+        if cart.totalItems() > 0 {
+            return "Cart (\(cart.totalItems()))"
+        }
+        return "Cart"
+    }
+    
     var numberOfCategories: Int {
         guard let number = catalog.allCategories()?.count else {
             return 0
