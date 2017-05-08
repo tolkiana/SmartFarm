@@ -36,4 +36,11 @@ struct CatalogViewModel {
         let item = category.items[indexPath.row]
         return CatalogItemViewModel(storeItem: item)
     }
+    
+    func categoryName(forSection section: Int) -> String {
+        guard let category = catalog.allCategories()?[section] else {
+            return ""
+        }
+        return category.name
+    }
 }

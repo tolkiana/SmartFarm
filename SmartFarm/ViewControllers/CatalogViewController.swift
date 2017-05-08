@@ -20,6 +20,7 @@ extension CatalogViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfCategories;
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfItems(inSection: section);
     }
@@ -32,4 +33,7 @@ extension CatalogViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.categoryName(forSection: section)
+    }
 }
