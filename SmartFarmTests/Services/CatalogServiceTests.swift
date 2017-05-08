@@ -117,18 +117,18 @@ class CatalogServiceTests: XCTestCase {
         let category = CatalogService.shared.category(with: "002")!
         let total = CatalogService.shared.totalItems(inCategory: category)
         
-        XCTAssert(total == 15)
+        XCTAssert(total == 45)
     }
     
     func test_get_total_items_for_category_code() {
         let total = CatalogService.shared.totalItems(forCategoryCode: "002")
         
-        XCTAssert(total == 15)
+        XCTAssert(total == 45)
     }
     
     func test_get_total_items() {
         let total = CatalogService.shared.totalItems()
         
-        XCTAssert(total == 45)
+        XCTAssert(total == 75)
     }
 }

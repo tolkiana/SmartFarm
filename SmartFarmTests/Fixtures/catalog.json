@@ -52,14 +52,21 @@
          "items": [{
                    "code": "007",
                    "categoryCode": "002",
-                   "name": "corn",
+                   "name": "Pepper",
+                   "image": "🌶",
+                   "price": 1.0,
+                   "numberAvailable": 30
+                   },{
+                   "code": "008",
+                   "categoryCode": "002",
+                   "name": "Corn",
                    "image": "🌽",
                    "price": 10.0,
                    "numberAvailable": 5
                    }, {
-                   "code": "008",
+                   "code": "009",
                    "categoryCode": "002",
-                   "name": "tomato",
+                   "name": "Tomato",
                    "image": "🍎",
                    "price": 5.0,
                    "numberAvailable": 10
