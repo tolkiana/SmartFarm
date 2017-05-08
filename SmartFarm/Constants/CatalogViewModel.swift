@@ -10,6 +10,7 @@ import Foundation
 
 struct CatalogViewModel {
     private let catalog = CatalogService.shared
+    private let cart = CartService.shared
     
     init() {
         catalog.loadData {}
@@ -42,5 +43,13 @@ struct CatalogViewModel {
             return ""
         }
         return category.name
+    }
+    
+    func addItem(atIndex indexPath: IndexPath) {
+        guard let category = catalog.allCategories()?[indexPath.section] else {
+            return
+        }
+        let item = category.items[indexPath.row]
+        cart.add(storeItem: item, quantity: 1)
     }
 }

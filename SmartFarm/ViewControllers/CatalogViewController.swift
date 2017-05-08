@@ -36,4 +36,9 @@ extension CatalogViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel.categoryName(forSection: section)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.addItem(atIndex: indexPath)
+        tableView.reloadData()
+    }
 }
