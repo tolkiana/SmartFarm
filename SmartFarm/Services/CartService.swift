@@ -94,7 +94,7 @@ class CartService: CartProtocol {
     
     // MARK: - Private
     
-    func addNew(item: StoreItem, quantity: Int) {
+    private func addNew(item: StoreItem, quantity: Int) {
         let newItem = CartItem(storeItem: item, quantity: quantity)
         items.append(newItem)
         
