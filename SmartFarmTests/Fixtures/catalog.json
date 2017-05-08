@@ -5,42 +5,42 @@
          "items": [{
                    "code": "001",
                    "categoryCode": "001",
-                   "name": "cow",
+                   "name": "Cow",
                    "image": "🐮",
                    "price": 100.0,
                    "numberAvailable": 4
                    }, {
                    "code": "002",
                    "categoryCode": "001",
-                   "name": "pig",
+                   "name": "Pig",
                    "image": "🐷",
                    "price": 50.0,
                    "numberAvailable": 4
                    }, {
                    "code": "003",
                    "categoryCode": "001",
-                   "name": "goat",
+                   "name": "Goat",
                    "image": "🐐",
                    "price": 50.0,
                    "numberAvailable": 2
                    }, {
                    "code": "004",
                    "categoryCode": "001",
-                   "name": "horse",
+                   "name": "Horse",
                    "image": "🐴",
                    "price": 120.0,
                    "numberAvailable": 5
                    }, {
                    "code": "005",
                    "categoryCode": "001",
-                   "name": "chicken",
+                   "name": "Chicken",
                    "image": "🐓",
                    "price": 10.0,
                    "numberAvailable": 10
                    }, {
                    "code": "006",
                    "categoryCode": "001",
-                   "name": "turkey",
+                   "name": "Turkey",
                    "image": "🦃",
                    "price": 20.0,
                    "numberAvailable": 5
