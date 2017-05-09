@@ -29,10 +29,9 @@ struct CartItemViewModel {
     }
     
     func updateQuantity(value: Double) {
-        let newQuantity = Int(value)
-        if newQuantity < item.quantity {
+        if Int(value) < item.quantity {
             cart.decrement(cartItem: item)
-        } else if newQuantity <= item.storeItem.numberAvailable {
+        } else if Int(value) <= item.storeItem.numberAvailable {
             cart.increment(cartItem: item)
         }
         quantityUpdated?()
