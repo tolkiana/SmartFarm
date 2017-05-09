@@ -20,5 +20,5 @@ protocol CartProtocol {
     func decrement(cartItem: CartItem)
     func cartItem(withStoreItemCode: Code) -> CartItem?
     func clearItems()
-    func checkout(completion: () -> Void)
+    func placeOrder(completion: () -> Void)
 }

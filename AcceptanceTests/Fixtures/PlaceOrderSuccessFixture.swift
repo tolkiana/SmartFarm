@@ -1,19 +1,20 @@
 //
-//  CheckoutFailureFixture.swift
+//  CheckoutSuccessFixture.swift
 //  SmartFarm
 //
-//  Created by Nelida Velazquez on 3/31/17.
+//  Created by Nelida Velazquez on 5/3/17.
 //  Copyright © 2017 Tolkiana. All rights reserved.
 //
 
 import Foundation
 
-@objc(CheckoutFailureFixture)
-class CheckoutFailureFixture: NSObject {
+@objc(PlaceOrderSuccessFixture)
+class PlaceOrderSuccessFixture: NSObject {
     let catalog = CatalogService.shared
     let cart = CartService.shared
     
     func productsInCatalog() -> String {
+        cart.placeOrder{}
         let total = catalog.totalItems(forCategoryCode: "001")
         return "\(total)"
     }
@@ -25,5 +26,4 @@ class CheckoutFailureFixture: NSObject {
     func cartTotalAmount() -> String {
         return "\(cart.totalAmount())"
     }
-
 }

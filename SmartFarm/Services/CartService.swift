@@ -88,7 +88,7 @@ class CartService: CartProtocol {
         items.removeAll()
     }
     
-    func checkout(completion: () -> Void) {
+    func placeOrder(completion: () -> Void) {
         clearItems()
     }
     
