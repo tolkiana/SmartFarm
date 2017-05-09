@@ -108,6 +108,11 @@
 		38F7A8221EBFE8570034DA9E /* CatalogItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F61EBC11D20034DA9E /* CatalogItemCell.swift */; };
 		38F7A8231EBFE8580034DA9E /* CatalogItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A7F61EBC11D20034DA9E /* CatalogItemCell.swift */; };
 		38F7A8241EBFE93D0034DA9E /* catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 38CFE6D21E91DCF80084A2ED /* catalog.json */; };
+		38F7A8281EC160E30034DA9E /* CatalogViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8271EC160E30034DA9E /* CatalogViewModelTests.swift */; };
+		38F7A82A1EC160EA0034DA9E /* CartViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A8291EC160EA0034DA9E /* CartViewModelTests.swift */; };
+		38F7A82C1EC1610E0034DA9E /* TotalViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A82B1EC1610E0034DA9E /* TotalViewModelTests.swift */; };
+		38F7A82E1EC161300034DA9E /* CartItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A82D1EC161300034DA9E /* CartItemViewModelTests.swift */; };
+		38F7A8301EC1614C0034DA9E /* CatalogItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7A82F1EC1614C0034DA9E /* CatalogItemViewModelTests.swift */; };
 		3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */; };
 		4AE6CDE934B89F083854D5D9 /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC154B762F6CA320EA0614C8 /* Pods_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
@@ -181,6 +186,11 @@
 		38F7A80C1EBFC0EA0034DA9E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38F7A8121EBFDC440034DA9E /* CatalogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CatalogViewModel.swift; path = SmartFarm/Constants/CatalogViewModel.swift; sourceTree = SOURCE_ROOT; };
 		38F7A8141EBFDC580034DA9E /* CartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartViewModel.swift; path = SmartFarm/Constants/CartViewModel.swift; sourceTree = SOURCE_ROOT; };
+		38F7A8271EC160E30034DA9E /* CatalogViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewModelTests.swift; sourceTree = "<group>"; };
+		38F7A8291EC160EA0034DA9E /* CartViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewModelTests.swift; sourceTree = "<group>"; };
+		38F7A82B1EC1610E0034DA9E /* TotalViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalViewModelTests.swift; sourceTree = "<group>"; };
+		38F7A82D1EC161300034DA9E /* CartItemViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItemViewModelTests.swift; sourceTree = "<group>"; };
+		38F7A82F1EC1614C0034DA9E /* CatalogItemViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogItemViewModelTests.swift; sourceTree = "<group>"; };
 		6484D6F75151074DAA9BDD96 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390F33BB35493E8571F6446 /* Pods-SmartFarmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFarmTests/Pods-SmartFarmTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -331,6 +341,11 @@
 		38CFE6AE1E9056630084A2ED /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				38F7A8291EC160EA0034DA9E /* CartViewModelTests.swift */,
+				38F7A8271EC160E30034DA9E /* CatalogViewModelTests.swift */,
+				38F7A82B1EC1610E0034DA9E /* TotalViewModelTests.swift */,
+				38F7A82D1EC161300034DA9E /* CartItemViewModelTests.swift */,
+				38F7A82F1EC1614C0034DA9E /* CatalogItemViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -803,9 +818,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				38F7A7C91EB522430034DA9E /* ResultType.swift in Sources */,
+				38F7A8281EC160E30034DA9E /* CatalogViewModelTests.swift in Sources */,
 				38F7A7D91EB661280034DA9E /* CartProtocol.swift in Sources */,
 				38F6534D1EAC445100E08FB6 /* NetworkManagerTests.swift in Sources */,
 				38CFE6CE1E91DBD50084A2ED /* StoreItemTests.swift in Sources */,
+				38F7A82C1EC1610E0034DA9E /* TotalViewModelTests.swift in Sources */,
 				38F7A7CD1EB522500034DA9E /* CatalogService.swift in Sources */,
 				38F7A81A1EBFE83A0034DA9E /* Constants.swift in Sources */,
 				38CFE6E11E91EAB80084A2ED /* JSONReader.swift in Sources */,
@@ -813,11 +830,14 @@
 				38F7A8071EBE6C810034DA9E /* CartItemViewModel.swift in Sources */,
 				38CFE6CC1E91DBBA0084A2ED /* CategoryTests.swift in Sources */,
 				38F7A7CE1EB522550034DA9E /* CartService.swift in Sources */,
+				38F7A82A1EC160EA0034DA9E /* CartViewModelTests.swift in Sources */,
 				38F7A7C41EB51B830034DA9E /* CartItem.swift in Sources */,
+				38F7A82E1EC161300034DA9E /* CartItemViewModelTests.swift in Sources */,
 				38F7A81F1EBFE8510034DA9E /* CartTotalCell.swift in Sources */,
 				38F653571EAC4DBF00E08FB6 /* CartServiceTests.swift in Sources */,
 				38F7A7CF1EB522610034DA9E /* CatalogViewController.swift in Sources */,
 				38F7A7C51EB51B860034DA9E /* StoreItem.swift in Sources */,
+				38F7A8301EC1614C0034DA9E /* CatalogItemViewModelTests.swift in Sources */,
 				38F7A7D41EB5349A0034DA9E /* CatalogProtocol.swift in Sources */,
 				38F7A7FE1EBC17C90034DA9E /* CartViewController.swift in Sources */,
 				38F7A8181EBFE81B0034DA9E /* CartViewModel.swift in Sources */,
