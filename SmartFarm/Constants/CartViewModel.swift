@@ -19,5 +19,9 @@ struct CartViewModel {
         let item = cart.cartItems()[indexPath.row]
         return CartItemViewModel(cartItem: item)
     }
+    
+    func removeItem(at indexPath: IndexPath) {
+        let item = cart.cartItems()[indexPath.row]
+        cart.remove(cartItem: item)
+    }
 }
-
