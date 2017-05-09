@@ -14,6 +14,8 @@ class CartViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var checkoutButton: UIBarButtonItem!
     
+    // MARK: - View Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.updateHanlder = { [weak self] in
@@ -26,6 +28,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2;
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if CartViewControllerConstants.Section.item == section {
             return viewModel.numberOfItems()

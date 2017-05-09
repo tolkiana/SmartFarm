@@ -30,7 +30,6 @@ class CatalogViewController: UIViewController {
 }
 
 extension CatalogViewController: UITableViewDataSource, UITableViewDelegate {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfCategories;
     }
