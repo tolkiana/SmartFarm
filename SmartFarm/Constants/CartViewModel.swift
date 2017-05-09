@@ -15,8 +15,9 @@ struct CartViewModel {
         return cart.cartItems().count
     }
     
-    func itemViewModel(forIndexPath indexPath: IndexPath) -> CartItemViewModel {
+    func itemViewModel(`for` indexPath: IndexPath) -> CartItemViewModel {
         let item = cart.cartItems()[indexPath.row]
         return CartItemViewModel(cartItem: item)
     }
 }
+
