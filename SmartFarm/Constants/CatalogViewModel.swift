@@ -37,7 +37,7 @@ struct CatalogViewModel {
         return category.items.count
     }
     
-    func itemViewModel(forIndexPath indexPath: IndexPath) -> CatalogItemViewModel {
+    func itemViewModel(`for` indexPath: IndexPath) -> CatalogItemViewModel {
         guard let category = catalog.allCategories()?[indexPath.section] else {
             return CatalogItemViewModel()
         }
