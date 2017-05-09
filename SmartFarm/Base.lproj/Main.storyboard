@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,8 +41,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmZ-9e-rvy">
-                                                    <rect key="frame" x="85" y="34" width="36.5" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                    <rect key="frame" x="85" y="34" width="38" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -139,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="-202.40000000000001" y="136.28185907046478"/>
         </scene>
-        <!--Cart View Controller-->
+        <!--Cart-->
         <scene sceneID="xHJ-71-GLe">
             <objects>
-                <viewController id="q3m-T7-pQp" customClass="CartViewController" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Cart" id="q3m-T7-pQp" customClass="CartViewController" customModule="SmartFarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yR5-sN-6hB"/>
                         <viewControllerLayoutGuide type="bottom" id="LtA-ZN-u2U"/>
@@ -151,15 +152,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PMz-Eo-5Ku">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PMz-Eo-5Ku">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartItemCellIdentifier" id="Ey3-u6-oTQ" customClass="CartItemCell" customModule="SmartFarm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ey3-u6-oTQ" id="idg-Bl-REe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FfL-zH-FuF">
@@ -219,10 +220,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalCellIdentifier" id="GZn-qe-8Wj" customClass="CartTotalCell" customModule="SmartFarm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="83" width="375" height="55"/>
+                                        <rect key="frame" x="0.0" y="88" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GZn-qe-8Wj" id="keC-ef-myS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total (0 items):" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odu-o4-BtV">
@@ -260,7 +261,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bbz-gI-ez5"/>
-                                    <barButtonItem title="Checkout" id="rAR-KA-YSg"/>
+                                    <barButtonItem title="Checkout" id="rAR-KA-YSg">
+                                        <connections>
+                                            <segue destination="eBf-6j-hvO" kind="show" id="0GT-yL-gAC"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -282,7 +287,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rhw-oX-pTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="135.38230884557723"/>
+            <point key="canvasLocation" x="1524" y="136"/>
+        </scene>
+        <!--Checkout-->
+        <scene sceneID="Ydc-1q-P7a">
+            <objects>
+                <viewController title="Checkout" id="eBf-6j-hvO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UST-Ly-5wl"/>
+                        <viewControllerLayoutGuide type="bottom" id="60R-yQ-KeY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3XS-Hw-rxh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration mm/yyy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RfT-bO-COr">
+                                <rect key="frame" x="24" y="142" width="165" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="hlf-e9-3VU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yOG-87-ehA">
+                                <rect key="frame" x="310" y="95" width="41" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yOG-87-ehA" secondAttribute="height" multiplier="41:28" id="kCK-vf-kuq"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1AD-mJ-SOr">
+                                <rect key="frame" x="24" y="94" width="266" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="mDo-RA-BwW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXT-Sd-ECD">
+                                <rect key="frame" x="147" y="204" width="81" height="30"/>
+                                <state key="normal" title="Place Order"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-gG-ygd">
+                                <rect key="frame" x="209" y="142" width="81" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="3sC-5h-TrC"/>
+                                    <constraint firstAttribute="height" constant="32" id="FUC-n3-4Vq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ahZ-gG-ygd" firstAttribute="leading" secondItem="RfT-bO-COr" secondAttribute="trailing" constant="20" id="24H-si-BQm"/>
+                            <constraint firstItem="RfT-bO-COr" firstAttribute="top" secondItem="1AD-mJ-SOr" secondAttribute="bottom" constant="16" id="2DW-db-M3k"/>
+                            <constraint firstItem="yOG-87-ehA" firstAttribute="top" secondItem="UST-Ly-5wl" secondAttribute="bottom" constant="31" id="7T8-1g-Mk6"/>
+                            <constraint firstItem="ahZ-gG-ygd" firstAttribute="top" secondItem="1AD-mJ-SOr" secondAttribute="bottom" constant="16" id="ACD-3Y-ZhH"/>
+                            <constraint firstItem="kXT-Sd-ECD" firstAttribute="centerX" secondItem="3XS-Hw-rxh" secondAttribute="centerX" id="AHL-yI-o5O"/>
+                            <constraint firstItem="kXT-Sd-ECD" firstAttribute="top" secondItem="ahZ-gG-ygd" secondAttribute="bottom" constant="30" id="DfL-he-yd6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yOG-87-ehA" secondAttribute="trailing" constant="8" id="Ndo-u6-blT"/>
+                            <constraint firstItem="yOG-87-ehA" firstAttribute="width" secondItem="3XS-Hw-rxh" secondAttribute="height" multiplier="41:667" id="kS4-Bl-v2w"/>
+                            <constraint firstItem="1AD-mJ-SOr" firstAttribute="leading" secondItem="3XS-Hw-rxh" secondAttribute="leadingMargin" constant="8" id="kmf-kO-rYL"/>
+                            <constraint firstItem="1AD-mJ-SOr" firstAttribute="top" secondItem="UST-Ly-5wl" secondAttribute="bottom" constant="30" id="mI3-VU-NyL"/>
+                            <constraint firstItem="yOG-87-ehA" firstAttribute="leading" secondItem="1AD-mJ-SOr" secondAttribute="trailing" constant="20" id="rwy-25-hb1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ahZ-gG-ygd" secondAttribute="trailing" constant="69" id="tBC-r4-h7W"/>
+                            <constraint firstItem="RfT-bO-COr" firstAttribute="leading" secondItem="3XS-Hw-rxh" secondAttribute="leadingMargin" constant="8" id="xDh-U1-Dqv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1MK-Vb-0SU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2317.5999999999999" y="134.48275862068968"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="card_icon" width="148" height="90"/>
+    </resources>
 </document>
