@@ -9,10 +9,17 @@
 import UIKit
 
 class CartViewController: UIViewController {
-    let viewModel = CartViewModel()
+    var viewModel = CartViewModel()
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var checkoutButton: UIBarButtonItem!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.updateHanlder = { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
 }
 
 extension CartViewController: UITableViewDataSource, UITableViewDelegate {
@@ -29,10 +36,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if CartViewControllerConstants.Section.item == indexPath.section {
             let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.cartItemCell) as! CartItemCell
-            var itemViewModel = viewModel.itemViewModel(for: indexPath)
-            itemViewModel.quantityUpdated = {
-                tableView.reloadData()
-            }
+            let itemViewModel = viewModel.itemViewModel(for: indexPath)
             cell.configure(with: itemViewModel)
             return cell
         }

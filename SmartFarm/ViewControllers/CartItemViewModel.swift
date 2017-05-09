@@ -17,7 +17,7 @@ struct CartItemViewModel {
     var quantity: String
     var price: String
     var stepperValue: Double
-    var quantityUpdated: (() -> Void)?
+    var updateHanlder: (() -> Void)?
     
     init(cartItem: CartItem) {
         self.item = cartItem
@@ -28,13 +28,18 @@ struct CartItemViewModel {
         self.stepperValue = Double(cartItem.quantity)
     }
     
+    init(cartItem: CartItem, handler: (() -> Void)?) {
+        self.init(cartItem: cartItem)
+        self.updateHanlder = handler
+    }
+    
     func updateQuantity(value: Double) {
         if Int(value) < item.quantity {
             cart.decrement(cartItem: item)
         } else if Int(value) <= item.storeItem.numberAvailable {
             cart.increment(cartItem: item)
         }
-        quantityUpdated?()
+        updateHanlder?()
     }
     
 }

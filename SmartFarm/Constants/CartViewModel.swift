@@ -10,6 +10,7 @@ import Foundation
 
 struct CartViewModel {
     private let cart = CartService.shared
+    var updateHanlder: (() -> Void)?
     
     func numberOfItems() -> Int {
         return cart.cartItems().count
@@ -17,7 +18,7 @@ struct CartViewModel {
     
     func itemViewModel(`for` indexPath: IndexPath) -> CartItemViewModel {
         let item = cart.cartItems()[indexPath.row]
-        return CartItemViewModel(cartItem: item)
+        return CartItemViewModel(cartItem: item, handler: updateHanlder)
     }
     
     func removeItem(at indexPath: IndexPath) {
