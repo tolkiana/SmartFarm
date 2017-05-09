@@ -29,7 +29,10 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if CartViewControllerConstants.Section.item == indexPath.section {
             let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.cartItemCell) as! CartItemCell
-            let itemViewModel = viewModel.itemViewModel(forIndexPath: indexPath)
+            var itemViewModel = viewModel.itemViewModel(forIndexPath: indexPath)
+            itemViewModel.quantityUpdated = {
+                tableView.reloadData()
+            }
             cell.configure(with: itemViewModel)
             return cell
         }

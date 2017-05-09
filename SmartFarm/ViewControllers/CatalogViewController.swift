@@ -19,6 +19,7 @@ class CatalogViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         updateCartButton()
+        tableView.reloadData()
     }
     
     // MARK: - View Setup
