@@ -40,8 +40,7 @@ extension CatalogViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.CellIdentifiers.catalogItemCell) as! CatalogItemCell
-        let itemViewModel = viewModel.itemViewModel(for: indexPath)
-        cell.configure(with: itemViewModel)
+        cell.configure(with: viewModel.itemViewModel(for: indexPath))
         
         return cell
     }
