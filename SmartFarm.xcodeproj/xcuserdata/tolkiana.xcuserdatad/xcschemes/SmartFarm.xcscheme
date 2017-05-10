@@ -38,6 +38,16 @@
                ReferencedContainer = "container:SmartFarm.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "38F7A84C1EC2C8380034DA9E"
+               BuildableName = "SmartFarmUITests.xctest"
+               BlueprintName = "SmartFarmUITests"
+               ReferencedContainer = "container:SmartFarm.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

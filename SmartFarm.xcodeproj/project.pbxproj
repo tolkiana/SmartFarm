@@ -125,6 +125,13 @@
 			remoteGlobalIDString = 38E7A5FA1E8B3DD40079DE1E;
 			remoteInfo = SmartFarm;
 		};
+		38F7A8521EC2C8380034DA9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E7A5F31E8B3DD40079DE1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38E7A5FA1E8B3DD40079DE1E;
+			remoteInfo = SmartFarm;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -191,6 +198,8 @@
 		38F7A82B1EC1610E0034DA9E /* TotalViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalViewModelTests.swift; sourceTree = "<group>"; };
 		38F7A82D1EC161300034DA9E /* CartItemViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItemViewModelTests.swift; sourceTree = "<group>"; };
 		38F7A82F1EC1614C0034DA9E /* CatalogItemViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogItemViewModelTests.swift; sourceTree = "<group>"; };
+		38F7A84D1EC2C8380034DA9E /* SmartFarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartFarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38F7A8511EC2C8380034DA9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6484D6F75151074DAA9BDD96 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C331F14AB65CB927BB28B7EA /* Pods_SmartFarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390F33BB35493E8571F6446 /* Pods-SmartFarmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFarmTests/Pods-SmartFarmTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +227,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D00FBC69F2EE8DFE395227D /* Pods_SmartFarmTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38F7A84A1EC2C8380034DA9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +399,7 @@
 				38E7A5FD1E8B3DD40079DE1E /* SmartFarm */,
 				38E7A6121E8B3DD40079DE1E /* SmartFarmTests */,
 				3826DD151E8B3ED900340C07 /* AcceptanceTests */,
+				38F7A84E1EC2C8380034DA9E /* SmartFarmUITests */,
 				38E7A5FC1E8B3DD40079DE1E /* Products */,
 				414BD0EE9C478A0B5BC3F9CB /* Pods */,
 				C2FBBEDD4A49F3B9E65CFFDB /* Frameworks */,
@@ -395,6 +412,7 @@
 				38E7A5FB1E8B3DD40079DE1E /* SmartFarm.app */,
 				38E7A60F1E8B3DD40079DE1E /* SmartFarmTests.xctest */,
 				3826DD141E8B3ED900340C07 /* AcceptanceTests.app */,
+				38F7A84D1EC2C8380034DA9E /* SmartFarmUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -467,6 +485,14 @@
 				38F7A80C1EBFC0EA0034DA9E /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		38F7A84E1EC2C8380034DA9E /* SmartFarmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				38F7A8511EC2C8380034DA9E /* Info.plist */,
+			);
+			path = SmartFarmUITests;
 			sourceTree = "<group>";
 		};
 		414BD0EE9C478A0B5BC3F9CB /* Pods */ = {
@@ -551,6 +577,24 @@
 			productReference = 38E7A60F1E8B3DD40079DE1E /* SmartFarmTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		38F7A84C1EC2C8380034DA9E /* SmartFarmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38F7A8561EC2C8380034DA9E /* Build configuration list for PBXNativeTarget "SmartFarmUITests" */;
+			buildPhases = (
+				38F7A8491EC2C8380034DA9E /* Sources */,
+				38F7A84A1EC2C8380034DA9E /* Frameworks */,
+				38F7A84B1EC2C8380034DA9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38F7A8531EC2C8380034DA9E /* PBXTargetDependency */,
+			);
+			name = SmartFarmUITests;
+			productName = SmartFarmUITests;
+			productReference = 38F7A84D1EC2C8380034DA9E /* SmartFarmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -576,6 +620,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 38E7A5FA1E8B3DD40079DE1E;
 					};
+					38F7A84C1EC2C8380034DA9E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 38E7A5FA1E8B3DD40079DE1E;
+					};
 				};
 			};
 			buildConfigurationList = 38E7A5F61E8B3DD40079DE1E /* Build configuration list for PBXProject "SmartFarm" */;
@@ -594,6 +643,7 @@
 				38E7A5FA1E8B3DD40079DE1E /* SmartFarm */,
 				38E7A60E1E8B3DD40079DE1E /* SmartFarmTests */,
 				3826DD131E8B3ED900340C07 /* AcceptanceTests */,
+				38F7A84C1EC2C8380034DA9E /* SmartFarmUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -625,6 +675,13 @@
 				38CFE6DB1E91E89D0084A2ED /* catalog_missing_keys.json in Resources */,
 				38CFE6DA1E91E89D0084A2ED /* catalog_invalid_data.json in Resources */,
 				38CFE6D31E91DCF80084A2ED /* catalog.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38F7A84B1EC2C8380034DA9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,6 +914,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38F7A8491EC2C8380034DA9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -864,6 +928,11 @@
 			isa = PBXTargetDependency;
 			target = 38E7A5FA1E8B3DD40079DE1E /* SmartFarm */;
 			targetProxy = 38E7A6101E8B3DD40079DE1E /* PBXContainerItemProxy */;
+		};
+		38F7A8531EC2C8380034DA9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38E7A5FA1E8B3DD40079DE1E /* SmartFarm */;
+			targetProxy = 38F7A8521EC2C8380034DA9E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1063,6 +1132,30 @@
 			};
 			name = Release;
 		};
+		38F7A8541EC2C8380034DA9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SmartFarmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SmartFarm;
+			};
+			name = Debug;
+		};
+		38F7A8551EC2C8380034DA9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SmartFarmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolkiana.SmartFarmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SmartFarm;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1101,6 +1194,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		38F7A8561EC2C8380034DA9E /* Build configuration list for PBXNativeTarget "SmartFarmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38F7A8541EC2C8380034DA9E /* Debug */,
+				38F7A8551EC2C8380034DA9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
